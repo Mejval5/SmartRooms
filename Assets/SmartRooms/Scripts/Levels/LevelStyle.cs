@@ -30,7 +30,7 @@ namespace SmartRooms.Levels
         [field: SerializeField] public Color BackgroundColor { get; private set; } = new (0.15f,0.15f,0.15f,1f);
         [field: SerializeField] public TileBase SurroundingTile { get; private set; }
         [field: SerializeField] public Material SurroundingMaterial { get; private set; }
-        [field: SerializeField] public List<ObjectPattern> FoliagePatterns { get; private set; } 
+        [field: SerializeField] public List<ObjectPattern> SpawnableObjectPatterns { get; private set; } 
         [field: SerializeField] public Vector2Int LevelTileSize { get; private set; } = new (4, 4);
         [field: SerializeField] public BuildMode BuildModeDirection { get; private set; } = BuildMode.TopToBottom;
         [field: SerializeField] public List<SmartRoom> Rooms { get; private set; }

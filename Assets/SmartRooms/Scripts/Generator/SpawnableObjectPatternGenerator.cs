@@ -175,7 +175,7 @@ namespace SmartRooms.Generator
 
         private void GenerateByStyle()
         {
-            foreach (ObjectPattern foliagePattern in _levelStyle.FoliagePatterns)
+            foreach (ObjectPattern foliagePattern in _levelStyle.SpawnableObjectPatterns)
             {
                 foliagePattern.Initialize();
                 GenerateByPattern(foliagePattern);

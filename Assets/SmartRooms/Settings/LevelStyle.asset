@@ -17,8 +17,7 @@ MonoBehaviour:
   <BackgroundColor>k__BackingField: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
   <SurroundingTile>k__BackingField: {fileID: 11400000, guid: 17eedce5ac233b44c8924f3cafd8b5c5, type: 2}
   <SurroundingMaterial>k__BackingField: {fileID: 2100000, guid: b46ac721a5c085941a0c1f973f7af6d6, type: 2}
-  <FoliagePatterns>k__BackingField:
-  - {fileID: 11400000, guid: b9416347f5fa1144db969abae131440d, type: 2}
+  <FoliagePatterns>k__BackingField: []
   <LevelTileSize>k__BackingField: {x: 4, y: 4}
   <BuildModeDirection>k__BackingField: 0
   <Rooms>k__BackingField:
