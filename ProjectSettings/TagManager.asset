@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - ground
+  - enemy
+  - Playermain
+  - fallchek
+  - platform
+  - Joystick
+  - Mainground
+  - Diamond
+  - Traps
+  - room
+  - GenerateStartingPos
+  - Tiles
+  - Rope
+  - OneWayPlatform
+  - Enemy
+  - Spikes
+  - Block
+  - Dirt
+  - Ladder
+  - Exit
+  - Entrance
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - ground
+  - Water
+  - UI
+  - enemyLayers
+  - player
+  - Background
+  - mapobjects
+  - room
+  - platform
+  - roomCounter
+  - SpawnpointTiles
+  - Ladder
+  - OneWayPlatform
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: tilemapbg
+    uniqueID: 45440347
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: tilemap
+    uniqueID: 287524169
+    locked: 0
+  - name: enemy
+    uniqueID: 2622988229
+    locked: 0
+  - name: player
+    uniqueID: 253552789
+    locked: 0
+  - name: bground
+    uniqueID: 1111584245
+    locked: 0

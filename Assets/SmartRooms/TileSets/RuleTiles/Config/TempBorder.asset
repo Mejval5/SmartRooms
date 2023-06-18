@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26cf1b00bf7a7694c89382d3e1a7ebe4, type: 3}
+  m_Name: TempBorder
+  m_EditorClassIdentifier: 
+  <Value>k__BackingField:
+  - {fileID: 1763375895, guid: 063a3596bd7eeb541a8699f1c9a98c30, type: 3}
+  - {fileID: -1376597412, guid: 063a3596bd7eeb541a8699f1c9a98c30, type: 3}

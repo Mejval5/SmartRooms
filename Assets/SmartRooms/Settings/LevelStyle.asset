@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7918b4fb847ea7d498c87050bf9fef42, type: 3}
+  m_Name: LevelStyle
+  m_EditorClassIdentifier: 
+  <DefaultGroundTile>k__BackingField: {fileID: 11400000, guid: b2376460a6bef0d41a7d9b64935738ce, type: 2}
+  <BackgroundSprite>k__BackingField: {fileID: 21300000, guid: 31c906bd2b3b41948ae8c4d4c69cdad7, type: 3}
+  <BackgroundColor>k__BackingField: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
+  <SurroundingTile>k__BackingField: {fileID: 11400000, guid: 17eedce5ac233b44c8924f3cafd8b5c5, type: 2}
+  <SurroundingMaterial>k__BackingField: {fileID: 2100000, guid: b46ac721a5c085941a0c1f973f7af6d6, type: 2}
+  <FoliagePatterns>k__BackingField:
+  - {fileID: 11400000, guid: b9416347f5fa1144db969abae131440d, type: 2}
+  <LevelTileSize>k__BackingField: {x: 4, y: 4}
+  <BuildModeDirection>k__BackingField: 0
+  <Rooms>k__BackingField:
+  - {fileID: -7283875756995121657, guid: 98307893418c60e44983b8389ec40c10, type: 3}
+  - {fileID: 9005690575571127960, guid: c1acd91367cd35e4a872db2c8b9e94c6, type: 3}
+  - {fileID: 9005690575571127960, guid: 6612fc3db13b63b47bb748aae54b67b7, type: 3}
+  - {fileID: 9005690575571127960, guid: 713d333903deefe42820f1f728cc9136, type: 3}
+  <StartRooms>k__BackingField:
+  - {fileID: 9005690575571127960, guid: cf075d280aa9cd5489a7e450ba0f589d, type: 3}
+  - {fileID: 9005690575571127960, guid: 95520ab522281254fa3033e6272bb80e, type: 3}
+  - {fileID: 9005690575571127960, guid: 4e61bb3efd6bdec4bb1b7921fea3afdd, type: 3}
+  <EndRooms>k__BackingField:
+  - {fileID: 9005690575571127960, guid: 133128b7ff6b27846a73387f92553c37, type: 3}
+  - {fileID: 9005690575571127960, guid: ee4a142c8b6705b468b1aaf2813fdd26, type: 3}
+  - {fileID: 9005690575571127960, guid: 8e6387bb1997de441ae1bd4401f3666b, type: 3}
+  <SpecialRooms>k__BackingField:
+  - specialRoomGroupID: shop
+    mandatory: 0
+    spawnChance: 100
+    room: {fileID: -753823368610674333, guid: bc4de5edab699394592902efe1689fa6, type: 3}
+  - specialRoomGroupID: shop
+    mandatory: 0
+    spawnChance: 100
+    room: {fileID: -6398231229833641348, guid: d42a2a90382a03e4abb0f585e6819240, type: 3}
+  - specialRoomGroupID: bigger
+    mandatory: 0
+    spawnChance: 100
+    room: {fileID: -6398231229833641348, guid: 03b5394114c521b45ac33dcca65974b7, type: 3}

@@ -1,0 +1,1224 @@
+fileFormatVersion: 2
+guid: 063a3596bd7eeb541a8699f1c9a98c30
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 256
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c8886c6d7e3a0a4da6d6528de013dbd
+      internalID: 2130907520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_1
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 639
+        width: 127
+        height: 894
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef42984eae26fa448312b96f36cb03d
+      internalID: 1563307497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_2
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 1208
+        width: 119
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3de46b80588da7458a126419efac65f
+      internalID: -594818436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_3
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1430
+        width: 87
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7aec69dd4908b34a934256615bfae7a
+      internalID: 1288690135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_4
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1408
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415f10fcf82fed14ea53956029f70ebd
+      internalID: -596494145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_5
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 1409
+        width: 122
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52224210a4816924ba8d407673e6559e
+      internalID: -1661618941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_6
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 1450
+        width: 123
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ab85df7e04f9040833e334e6b59c28
+      internalID: -1546545235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_7
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 1025
+        width: 262
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b637babb7363c5e42bd15bd2e96bd6a5
+      internalID: -253448868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_8
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 1195
+        width: 107
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6c9678d9c19bb4189781b2171a3fb8
+      internalID: 1491082638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_9
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 1153
+        width: 262
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dfd9e2e870b4c04f874b7f8c3bac076
+      internalID: 1498189917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_10
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 1280
+        width: 80
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad66276396100dd4788868082807ebc5
+      internalID: 346639706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_11
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 1031
+        width: 119
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb63788db3733d74f9587de427cb8919
+      internalID: -596673572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_12
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 1027
+        width: 111
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986982794e85a89428bda6c691843246
+      internalID: -631025590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_13
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 1028
+        width: 119
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca32d2f76db5a914d8fdcba2438de4ed
+      internalID: 285691799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_14
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 1030
+        width: 131
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4660b28d2d8682949994cbf3856e9982
+      internalID: 1333148019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_15
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 1023
+        width: 123
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f9dd048fd44b23429ca5888b890541f
+      internalID: 1022064579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_16
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 897
+        width: 92
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dcf61d8c1f4b4247a678e5038f8d3af
+      internalID: -794018180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_17
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 768
+        width: 92
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ec0de65a131e747bcf5ee9da192b6f
+      internalID: -753294877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_18
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 902
+        width: 109
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e66456288fc1554e82402542865638c
+      internalID: -700878265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_19
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 768
+        width: 130
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54396deb3e219d8459fba4ac6bf6637f
+      internalID: 2016509973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_20
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 768
+        width: 129
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5fa0aa6fdf06345b41be009f4d3592
+      internalID: -951638558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_21
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 768
+        width: 24
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d24b248c10fe2f4f95f4885d5916f7f
+      internalID: -1376597412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_22
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 768
+        width: 48
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9119bad3cb1e3fa4b8bc8d1a146da2ab
+      internalID: 1763375895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_23
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 766
+        width: 61
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e92c54f2e457074ea3ff178af3ac987
+      internalID: -1807062810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_24
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 861
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d86413d49a6da428076524654ed380
+      internalID: -886811721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_25
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 769
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75f3f0679668104eb551a6cf5ba8628
+      internalID: 1624600056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_26
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 674
+        width: 385
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e111bf3b9a47dac4ebacc63b24c86e70
+      internalID: -1540341381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_27
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 513
+        width: 244
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ce30aa01ae11940814d1caa09f6494
+      internalID: -1907576070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_28
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 642
+        width: 122
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53803ba1866cc1c47b36103674da72ca
+      internalID: 809789517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_29
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 325
+        width: 307
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b8d35c414e46348a21232113edf19b
+      internalID: -1322238233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_30
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 532
+        width: 385
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bef6d9e5cdad8c48842e5b64dd7e612
+      internalID: 1360525636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_31
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 418
+        width: 385
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d715632061ddd44aa2cb5f0386d8e8
+      internalID: 1856275459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_32
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 5
+        width: 307
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbda5a29f5c619a4abe0c7a6b479d582
+      internalID: 1444938137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_33
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 122
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98fcadeeae2e6a84e8010e60dca3e421
+      internalID: 1944538420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_34
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 251
+        width: 384
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 743649e01150db94ab451529341ac653
+      internalID: 525067419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_35
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 162
+        width: 54
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a359585fbb61c7447975214768174942
+      internalID: 773696700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_36
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 162
+        width: 54
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46692fbe360f56468eafaa5738cbc5c
+      internalID: -1523707996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_37
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 162
+        width: 54
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d25b29dda47364d820ac901ab0b629
+      internalID: 1311809832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_38
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 189
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f76cf50f98778c3459f594c0b7f8b1da
+      internalID: -1941651328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_39
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 184
+        width: 19
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe96701e2c736d409dd447b99400456
+      internalID: 1364600187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_40
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 189
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5e509bafd4432429d17d78736441e8
+      internalID: -834336245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_41
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 184
+        width: 19
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8accb68cef06d094fa26e1c1b658aa5b
+      internalID: -53820170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_42
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 189
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c9546cec067c046afd1e83ccde1881
+      internalID: -2113504962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_43
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 184
+        width: 19
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9043faeae2ccb45a012be47ee86b36
+      internalID: 710363645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_44
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1152
+        width: 256
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd4960ab57470c84fb947f0223568f9a
+      internalID: 209252911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97316eb5a5e45340a595b02dc88cb7f
+      internalID: 797257803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.07301084, y: 0.9391892}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf1dd5d0da3583468092b4f0cd64d95
+      internalID: -1065234747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4edf9e8c3621e9e4b9d4a17ecae7612a
+      internalID: -1207312388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_48
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e208f2d7e861c56409c2e8245fac0546
+      internalID: 815167165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spelunky_floor_tidepool_49
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 896
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af60b42bdae63e741a650fc131cfa1d4
+      internalID: 1001371929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spelunky_floor_tidepool_15: 1022064579
+      spelunky_floor_tidepool_19: 2016509973
+      spelunky_floor_tidepool_23: -1807062810
+      spelunky_floor_tidepool_17: -753294877
+      spelunky_floor_tidepool_29: -1322238233
+      spelunky_floor_tidepool_6: -1546545235
+      spelunky_floor_tidepool_30: 1360525636
+      spelunky_floor_tidepool_3: 1288690135
+      spelunky_floor_tidepool_31: 1856275459
+      spelunky_floor_tidepool_8: 1491082638
+      spelunky_floor_tidepool_26: -1540341381
+      spelunky_floor_tidepool_40: -834336245
+      spelunky_floor_tidepool_9: 1498189917
+      spelunky_floor_tidepool_27: -1907576070
+      spelunky_floor_tidepool_0: 2130907520
+      spelunky_floor_tidepool_4: -596494145
+      spelunky_floor_tidepool_48: 815167165
+      spelunky_floor_tidepool_39: 1364600187
+      spelunky_floor_tidepool_13: 285691799
+      spelunky_floor_tidepool_10: 346639706
+      spelunky_floor_tidepool_11: -596673572
+      spelunky_floor_tidepool_12: -631025590
+      spelunky_floor_tidepool_32: 1444938137
+      spelunky_floor_tidepool_37: 1311809832
+      spelunky_floor_tidepool_35: 773696700
+      spelunky_floor_tidepool_25: 1624600056
+      spelunky_floor_tidepool_47: -1207312388
+      spelunky_floor_tidepool_45: 797257803
+      spelunky_floor_tidepool_22: 1763375895
+      spelunky_floor_tidepool_1: 1563307497
+      spelunky_floor_tidepool_28: 809789517
+      spelunky_floor_tidepool_49: 1001371929
+      spelunky_floor_tidepool_46: -1065234747
+      spelunky_floor_tidepool_16: -794018180
+      spelunky_floor_tidepool_42: -2113504962
+      spelunky_floor_tidepool_38: -1941651328
+      spelunky_floor_tidepool_24: -886811721
+      spelunky_floor_tidepool_43: 710363645
+      spelunky_floor_tidepool_14: 1333148019
+      spelunky_floor_tidepool_44: 209252911
+      spelunky_floor_tidepool_2: -594818436
+      spelunky_floor_tidepool_36: -1523707996
+      spelunky_floor_tidepool_34: 525067419
+      spelunky_floor_tidepool_21: -1376597412
+      spelunky_floor_tidepool_18: -700878265
+      spelunky_floor_tidepool_41: -53820170
+      spelunky_floor_tidepool_5: -1661618941
+      spelunky_floor_tidepool_7: -253448868
+      spelunky_floor_tidepool_33: 1944538420
+      spelunky_floor_tidepool_20: -951638558
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
