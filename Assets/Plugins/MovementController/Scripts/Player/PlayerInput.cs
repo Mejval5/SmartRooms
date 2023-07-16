@@ -46,22 +46,22 @@ namespace MovementController.Player
                 _player.stateMachine.CurrentState.OnJumpInputUp();
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Joystick1Button1))
+            if (Input.GetButtonDown("Bomb") || Input.GetKeyDown(KeyCode.Joystick1Button1))
             {
                 _player.stateMachine.CurrentState.OnBombInputDown();
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Joystick1Button3))
+            if (Input.GetButtonDown("Rope") || Input.GetKeyDown(KeyCode.Joystick1Button3))
             {
                 _player.stateMachine.CurrentState.OnRopeInputDown();
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha0) || Input.GetKeyDown(KeyCode.Joystick1Button5))
+            if (Input.GetButtonDown("Use") || Input.GetKeyDown(KeyCode.Joystick1Button5))
             {
                 _player.stateMachine.CurrentState.OnUseInputDown();
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Joystick1Button2))
+            if (Input.GetButtonDown("Attack") || Input.GetKeyDown(KeyCode.Joystick1Button2))
             {
                 _player.stateMachine.CurrentState.OnAttackInputDown();
             }

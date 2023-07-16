@@ -13,7 +13,16 @@ MonoBehaviour:
   m_Name: LookUp
   m_EditorClassIdentifier: 
   frames:
-  - {fileID: 21300000, guid: 8487e9a994107ba45bc1bb2a6fced64a, type: 3}
+  - {fileID: 1027837249, guid: c2e14e89858bf9e4c9cca0eef888f41f, type: 3}
+  - {fileID: 543716704, guid: c2e14e89858bf9e4c9cca0eef888f41f, type: 3}
+  - {fileID: 1433086237, guid: c2e14e89858bf9e4c9cca0eef888f41f, type: 3}
+  - {fileID: -1405907101, guid: c2e14e89858bf9e4c9cca0eef888f41f, type: 3}
+  - {fileID: -540595018, guid: c2e14e89858bf9e4c9cca0eef888f41f, type: 3}
+  - {fileID: 380224635, guid: c2e14e89858bf9e4c9cca0eef888f41f, type: 3}
+  - {fileID: -2115500055, guid: c2e14e89858bf9e4c9cca0eef888f41f, type: 3}
+  - {fileID: -1338690930, guid: c2e14e89858bf9e4c9cca0eef888f41f, type: 3}
+  - {fileID: -1264913825, guid: c2e14e89858bf9e4c9cca0eef888f41f, type: 3}
+  - {fileID: 1760074952, guid: c2e14e89858bf9e4c9cca0eef888f41f, type: 3}
   fps: 12
   looping: 0
   pingPong: 0

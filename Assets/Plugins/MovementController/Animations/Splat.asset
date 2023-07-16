@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: Splat
   m_EditorClassIdentifier: 
   frames:
-  - {fileID: 3575667593051264364, guid: 7a6b07f254f69d74283299835d19f105, type: 3}
-  - {fileID: 5700133136444788116, guid: 7a6b07f254f69d74283299835d19f105, type: 3}
-  - {fileID: -1675444205892039869, guid: 7a6b07f254f69d74283299835d19f105, type: 3}
-  - {fileID: -1036441582567821602, guid: 7a6b07f254f69d74283299835d19f105, type: 3}
-  - {fileID: 8932212215797296999, guid: 7a6b07f254f69d74283299835d19f105, type: 3}
-  - {fileID: 1485638293358931120, guid: 7a6b07f254f69d74283299835d19f105, type: 3}
+  - {fileID: 1272169525, guid: 4869ae36fbee6324a8f17911d6b1cacd, type: 3}
+  - {fileID: 1396943628, guid: 4869ae36fbee6324a8f17911d6b1cacd, type: 3}
+  - {fileID: -1168554723, guid: 4869ae36fbee6324a8f17911d6b1cacd, type: 3}
+  - {fileID: -904923084, guid: 4869ae36fbee6324a8f17911d6b1cacd, type: 3}
+  - {fileID: 263055222, guid: 4869ae36fbee6324a8f17911d6b1cacd, type: 3}
+  - {fileID: -827461999, guid: 4869ae36fbee6324a8f17911d6b1cacd, type: 3}
+  - {fileID: -942078453, guid: 4869ae36fbee6324a8f17911d6b1cacd, type: 3}
+  - {fileID: -1832765925, guid: 4869ae36fbee6324a8f17911d6b1cacd, type: 3}
+  - {fileID: 296633452, guid: 4869ae36fbee6324a8f17911d6b1cacd, type: 3}
+  - {fileID: -1009052189, guid: 4869ae36fbee6324a8f17911d6b1cacd, type: 3}
   fps: 36
   looping: 0
   pingPong: 0

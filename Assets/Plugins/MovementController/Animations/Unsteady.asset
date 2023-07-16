@@ -13,13 +13,12 @@ MonoBehaviour:
   m_Name: Unsteady
   m_EditorClassIdentifier: 
   frames:
-  - {fileID: 3394024684062966407, guid: 53db16d2cfe33f24e94b1720422db84f, type: 3}
-  - {fileID: -1985547696672238401, guid: 53db16d2cfe33f24e94b1720422db84f, type: 3}
-  - {fileID: -4083982835403778605, guid: 53db16d2cfe33f24e94b1720422db84f, type: 3}
-  - {fileID: -4733742642995860965, guid: 53db16d2cfe33f24e94b1720422db84f, type: 3}
-  - {fileID: -1838409549548614001, guid: 53db16d2cfe33f24e94b1720422db84f, type: 3}
-  - {fileID: 134850217611930468, guid: 53db16d2cfe33f24e94b1720422db84f, type: 3}
-  - {fileID: 2950981672997000225, guid: 53db16d2cfe33f24e94b1720422db84f, type: 3}
+  - {fileID: -55436894, guid: c43f177c250385343b8b072d1ce4b155, type: 3}
+  - {fileID: 1881434862, guid: c43f177c250385343b8b072d1ce4b155, type: 3}
+  - {fileID: 1384621366, guid: c43f177c250385343b8b072d1ce4b155, type: 3}
+  - {fileID: 957956617, guid: c43f177c250385343b8b072d1ce4b155, type: 3}
+  - {fileID: 1820495915, guid: c43f177c250385343b8b072d1ce4b155, type: 3}
+  - {fileID: -10245449, guid: c43f177c250385343b8b072d1ce4b155, type: 3}
   fps: 12
   looping: 1
   pingPong: 0

@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Push
   m_EditorClassIdentifier: 
   frames:
-  - {fileID: -7279525710136958521, guid: 5b4a324dacd63bc499da00e034cc1324, type: 3}
-  - {fileID: 8092220566306130611, guid: 5b4a324dacd63bc499da00e034cc1324, type: 3}
-  - {fileID: -4865412993223310051, guid: 5b4a324dacd63bc499da00e034cc1324, type: 3}
-  - {fileID: -1889459256473174198, guid: 5b4a324dacd63bc499da00e034cc1324, type: 3}
-  - {fileID: -3389288309551913449, guid: 5b4a324dacd63bc499da00e034cc1324, type: 3}
-  - {fileID: -2444409116357537768, guid: 5b4a324dacd63bc499da00e034cc1324, type: 3}
-  - {fileID: 8009150292915193444, guid: 5b4a324dacd63bc499da00e034cc1324, type: 3}
+  - {fileID: 1670931553, guid: c25367ef04f104e4da7d705f07974147, type: 3}
+  - {fileID: -1836862140, guid: c25367ef04f104e4da7d705f07974147, type: 3}
+  - {fileID: 1814240856, guid: c25367ef04f104e4da7d705f07974147, type: 3}
+  - {fileID: 472871718, guid: c25367ef04f104e4da7d705f07974147, type: 3}
+  - {fileID: 1392794758, guid: c25367ef04f104e4da7d705f07974147, type: 3}
+  - {fileID: -370820205, guid: c25367ef04f104e4da7d705f07974147, type: 3}
+  - {fileID: 1217911551, guid: c25367ef04f104e4da7d705f07974147, type: 3}
+  - {fileID: -1868073765, guid: c25367ef04f104e4da7d705f07974147, type: 3}
+  - {fileID: 381553139, guid: c25367ef04f104e4da7d705f07974147, type: 3}
+  - {fileID: 1471149461, guid: c25367ef04f104e4da7d705f07974147, type: 3}
   fps: 12
   looping: 1
   pingPong: 0

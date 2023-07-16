@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Run
   m_EditorClassIdentifier: 
   frames:
-  - {fileID: 4944230376442633554, guid: 532aecad68dfc9e4ba143f992d30e55a, type: 3}
-  - {fileID: -2274363484027164459, guid: 532aecad68dfc9e4ba143f992d30e55a, type: 3}
-  - {fileID: 8284087734974297348, guid: 532aecad68dfc9e4ba143f992d30e55a, type: 3}
-  - {fileID: 5304202850863732263, guid: 532aecad68dfc9e4ba143f992d30e55a, type: 3}
-  - {fileID: 2833043080597125133, guid: 532aecad68dfc9e4ba143f992d30e55a, type: 3}
-  - {fileID: -2217414122262695004, guid: 532aecad68dfc9e4ba143f992d30e55a, type: 3}
+  - {fileID: -1803139750, guid: 3d537b43b4e49a64f824bb45bf60f032, type: 3}
+  - {fileID: 2109694320, guid: 3d537b43b4e49a64f824bb45bf60f032, type: 3}
+  - {fileID: 8376272, guid: 3d537b43b4e49a64f824bb45bf60f032, type: 3}
+  - {fileID: -1327915732, guid: 3d537b43b4e49a64f824bb45bf60f032, type: 3}
+  - {fileID: -1238293343, guid: 3d537b43b4e49a64f824bb45bf60f032, type: 3}
+  - {fileID: 1914661798, guid: 3d537b43b4e49a64f824bb45bf60f032, type: 3}
+  - {fileID: 1070785635, guid: 3d537b43b4e49a64f824bb45bf60f032, type: 3}
+  - {fileID: -1010072659, guid: 3d537b43b4e49a64f824bb45bf60f032, type: 3}
   fps: 12
   looping: 1
   pingPong: 0

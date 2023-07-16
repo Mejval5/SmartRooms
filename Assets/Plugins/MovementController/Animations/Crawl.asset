@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Crawl
   m_EditorClassIdentifier: 
   frames:
-  - {fileID: 4612047012486592167, guid: 104679a85c027dd4d989a5a3f2a216b2, type: 3}
-  - {fileID: 4759532313474675925, guid: 104679a85c027dd4d989a5a3f2a216b2, type: 3}
-  - {fileID: -485111123018289494, guid: 104679a85c027dd4d989a5a3f2a216b2, type: 3}
-  - {fileID: 8488165154635895383, guid: 104679a85c027dd4d989a5a3f2a216b2, type: 3}
-  - {fileID: -3711422061266335281, guid: 104679a85c027dd4d989a5a3f2a216b2, type: 3}
-  - {fileID: 4905233472970472490, guid: 104679a85c027dd4d989a5a3f2a216b2, type: 3}
-  - {fileID: -380015354583186446, guid: 104679a85c027dd4d989a5a3f2a216b2, type: 3}
-  - {fileID: -7080503041349776877, guid: 104679a85c027dd4d989a5a3f2a216b2, type: 3}
-  - {fileID: -2962669798062397163, guid: 104679a85c027dd4d989a5a3f2a216b2, type: 3}
-  - {fileID: -6992104523519937450, guid: 104679a85c027dd4d989a5a3f2a216b2, type: 3}
+  - {fileID: -287832061, guid: 402feded9cd666c409434891c48e1c1d, type: 3}
+  - {fileID: -1464188424, guid: 402feded9cd666c409434891c48e1c1d, type: 3}
+  - {fileID: 350096768, guid: 402feded9cd666c409434891c48e1c1d, type: 3}
+  - {fileID: 1051729324, guid: 402feded9cd666c409434891c48e1c1d, type: 3}
+  - {fileID: 637052928, guid: 402feded9cd666c409434891c48e1c1d, type: 3}
+  - {fileID: -1625897893, guid: 402feded9cd666c409434891c48e1c1d, type: 3}
+  - {fileID: -1258004007, guid: 402feded9cd666c409434891c48e1c1d, type: 3}
+  - {fileID: -1381165173, guid: 402feded9cd666c409434891c48e1c1d, type: 3}
+  - {fileID: -1100915788, guid: 402feded9cd666c409434891c48e1c1d, type: 3}
+  - {fileID: -291049783, guid: 402feded9cd666c409434891c48e1c1d, type: 3}
   fps: 12
   looping: 1
   pingPong: 0

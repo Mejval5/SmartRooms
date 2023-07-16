@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: AttackWithWhip
   m_EditorClassIdentifier: 
   frames:
-  - {fileID: 5454018280674833658, guid: 823c189372ebd3a4b955f410d98da2fd, type: 3}
-  - {fileID: -433406063395629704, guid: 823c189372ebd3a4b955f410d98da2fd, type: 3}
-  - {fileID: -3144716194148662350, guid: 823c189372ebd3a4b955f410d98da2fd, type: 3}
-  - {fileID: 2244216439305458313, guid: 823c189372ebd3a4b955f410d98da2fd, type: 3}
-  - {fileID: 6306416151778488805, guid: 823c189372ebd3a4b955f410d98da2fd, type: 3}
-  - {fileID: 1214633551801856960, guid: 823c189372ebd3a4b955f410d98da2fd, type: 3}
-  - {fileID: -2502364640234247385, guid: 823c189372ebd3a4b955f410d98da2fd, type: 3}
-  - {fileID: -3275365926141979921, guid: 823c189372ebd3a4b955f410d98da2fd, type: 3}
-  - {fileID: 6979130622598356396, guid: 823c189372ebd3a4b955f410d98da2fd, type: 3}
+  - {fileID: 274907739, guid: 08effba6df8044041ad2585c1f9fe6d5, type: 3}
+  - {fileID: 589630127, guid: 08effba6df8044041ad2585c1f9fe6d5, type: 3}
+  - {fileID: 778281668, guid: 08effba6df8044041ad2585c1f9fe6d5, type: 3}
+  - {fileID: 1887005413, guid: 08effba6df8044041ad2585c1f9fe6d5, type: 3}
+  - {fileID: 309258446, guid: 08effba6df8044041ad2585c1f9fe6d5, type: 3}
+  - {fileID: -715428790, guid: 08effba6df8044041ad2585c1f9fe6d5, type: 3}
+  - {fileID: -176954485, guid: 08effba6df8044041ad2585c1f9fe6d5, type: 3}
+  - {fileID: -1763029724, guid: 08effba6df8044041ad2585c1f9fe6d5, type: 3}
+  - {fileID: -113064789, guid: 08effba6df8044041ad2585c1f9fe6d5, type: 3}
+  - {fileID: 1823102661, guid: 08effba6df8044041ad2585c1f9fe6d5, type: 3}
   fps: 24
   looping: 0
   pingPong: 0
