@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26cf1b00bf7a7694c89382d3e1a7ebe4, type: 3}
-  m_Name: BasicTileBorderSide
+  m_Name: OrangeTileBorder
   m_EditorClassIdentifier: 
+  _developerDescription: 
   <Value>k__BackingField:
-  - {fileID: -1691761329, guid: 072a19f5efe9bdc47ac69ef9100aa59c, type: 3}
+  - {fileID: 1612573607, guid: 55924e3a334db3a4ab591f866aca6520, type: 3}

@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 452d38aa219a91b4ea3b4a496d6170bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _swappableSprites: {fileID: 11400000, guid: c717b490d2d441743924342b664c0685, type: 2}
+  _swappableSprites: {fileID: 11400000, guid: c18a51ef08bf93b4090eec21a16eff66, type: 2}
   _swapOnEnable: 0
 --- !u!1 &4223971410479673128
 GameObject:
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 452d38aa219a91b4ea3b4a496d6170bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _swappableSprites: {fileID: 11400000, guid: 5c99224fe1cabc348b5fb1a13760ab7a, type: 2}
+  _swappableSprites: {fileID: 11400000, guid: c18a51ef08bf93b4090eec21a16eff66, type: 2}
   _swapOnEnable: 0
 --- !u!1 &6020237123769393875
 GameObject:
@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 452d38aa219a91b4ea3b4a496d6170bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _swappableSprites: {fileID: 11400000, guid: 5c99224fe1cabc348b5fb1a13760ab7a, type: 2}
+  _swappableSprites: {fileID: 11400000, guid: c18a51ef08bf93b4090eec21a16eff66, type: 2}
   _swapOnEnable: 0
 --- !u!1 &7704191855080508706
 GameObject:

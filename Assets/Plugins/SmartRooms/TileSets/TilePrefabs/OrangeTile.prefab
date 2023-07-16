@@ -194,8 +194,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2976077439645063317}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: 0, y: 0.45, z: 0}
+  m_LocalScale: {x: 0.32, y: 0.32, z: 0.32}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 581730297588984554}
@@ -241,8 +241,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
-  m_Sprite: {fileID: -1691761329, guid: 072a19f5efe9bdc47ac69ef9100aa59c, type: 3}
+  m_SortingOrder: 8
+  m_Sprite: {fileID: 1612573607, guid: 55924e3a334db3a4ab591f866aca6520, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 452d38aa219a91b4ea3b4a496d6170bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _swappableSprites: {fileID: 11400000, guid: c717b490d2d441743924342b664c0685, type: 2}
+  _swappableSprites: {fileID: 11400000, guid: 4c734acb957bb734aaeae6146de6dac0, type: 2}
   _swapOnEnable: 0
 --- !u!1 &4223971410479673128
 GameObject:
@@ -293,8 +293,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4223971410479673128}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.5, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: -0.45, y: 0, z: 0}
+  m_LocalScale: {x: 0.32, y: 0.32, z: 0.32}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 581730297588984554}
@@ -340,8 +340,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
-  m_Sprite: {fileID: -1691761329, guid: 072a19f5efe9bdc47ac69ef9100aa59c, type: 3}
+  m_SortingOrder: 7
+  m_Sprite: {fileID: 1612573607, guid: 55924e3a334db3a4ab591f866aca6520, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 452d38aa219a91b4ea3b4a496d6170bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _swappableSprites: {fileID: 11400000, guid: 5c99224fe1cabc348b5fb1a13760ab7a, type: 2}
+  _swappableSprites: {fileID: 11400000, guid: 4c734acb957bb734aaeae6146de6dac0, type: 2}
   _swapOnEnable: 0
 --- !u!1 &6020237123769393875
 GameObject:
@@ -476,8 +476,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6358885718672899452}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -0.008, y: -0.5, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: 0, y: -0.45, z: 0}
+  m_LocalScale: {x: 0.32, y: 0.32, z: 0.32}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 581730297588984554}
@@ -523,8 +523,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
-  m_Sprite: {fileID: -1691761329, guid: 072a19f5efe9bdc47ac69ef9100aa59c, type: 3}
+  m_SortingOrder: 7
+  m_Sprite: {fileID: 1612573607, guid: 55924e3a334db3a4ab591f866aca6520, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 452d38aa219a91b4ea3b4a496d6170bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _swappableSprites: {fileID: 11400000, guid: c18a51ef08bf93b4090eec21a16eff66, type: 2}
+  _swappableSprites: {fileID: 11400000, guid: 4c734acb957bb734aaeae6146de6dac0, type: 2}
   _swapOnEnable: 0
 --- !u!1 &6800122676578010930
 GameObject:
@@ -575,8 +575,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6800122676578010930}
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: 0.45, y: 0, z: 0}
+  m_LocalScale: {x: 0.32, y: 0.32, z: 0.32}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 581730297588984554}
@@ -622,8 +622,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
-  m_Sprite: {fileID: -1691761329, guid: 072a19f5efe9bdc47ac69ef9100aa59c, type: 3}
+  m_SortingOrder: 7
+  m_Sprite: {fileID: 1612573607, guid: 55924e3a334db3a4ab591f866aca6520, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 452d38aa219a91b4ea3b4a496d6170bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _swappableSprites: {fileID: 11400000, guid: 5c99224fe1cabc348b5fb1a13760ab7a, type: 2}
+  _swappableSprites: {fileID: 11400000, guid: 4c734acb957bb734aaeae6146de6dac0, type: 2}
   _swapOnEnable: 0
 --- !u!1 &7704191855080508706
 GameObject:
@@ -710,7 +710,7 @@ MonoBehaviour:
   _rightShadow: {fileID: 631921143493779856}
   _bottomShadow: {fileID: 6020237123769393875}
   _cornerShadow: {fileID: 2460663480773092600}
-  _uniqueGuid: 8024fad8-09f3-402f-b424-0805da758deb
+  _uniqueGuid: fc7a8ad6-e725-4673-8b22-8595273731b1
 --- !u!114 &4322990045779878807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -792,7 +792,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8, y: 8}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26cf1b00bf7a7694c89382d3e1a7ebe4, type: 3}
-  m_Name: RandomOcickaSprite
+  m_Name: GoldAndGreenTileBorder
   m_EditorClassIdentifier: 
+  _developerDescription: 
   <Value>k__BackingField:
-  - {fileID: 21300000, guid: 5f04f6c61dec52a48a7fd9dec53e3636, type: 3}
-  - {fileID: 21300000, guid: 507f5334767506a4d8c6228291afbed8, type: 3}
+  - {fileID: -1691761329, guid: 072a19f5efe9bdc47ac69ef9100aa59c, type: 3}

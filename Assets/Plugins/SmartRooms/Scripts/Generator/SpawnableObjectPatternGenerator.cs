@@ -66,6 +66,11 @@ namespace SmartRooms.Generator
                 return;
             }
             
+            if (Application.isPlaying)
+            {
+                _objectHolder.DestroyAllChildren();
+            }
+            
             _levelGenerator.LevelGenerated += GenerateWithLevelGeneratorNextFrame;
         }
 

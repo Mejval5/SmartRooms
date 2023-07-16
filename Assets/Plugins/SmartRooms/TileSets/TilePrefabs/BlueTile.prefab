@@ -710,7 +710,7 @@ MonoBehaviour:
   _rightShadow: {fileID: 631921143493779856}
   _bottomShadow: {fileID: 6020237123769393875}
   _cornerShadow: {fileID: 2460663480773092600}
-  _uniqueGuid: 8024fad8-09f3-402f-b424-0805da758deb
+  _uniqueGuid: 22ceade3-8277-483c-b0dc-334d42424b2d
 --- !u!114 &4322990045779878807
 MonoBehaviour:
   m_ObjectHideFlags: 0
