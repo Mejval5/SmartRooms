@@ -14,11 +14,13 @@ namespace SmartRooms.Palette
     /// It can contain substructures.
     /// It has an entrance by default.
     /// </summary>
+#if UNITY_EDITOR
+    [HideScriptField]
+#endif
     [ExecuteAlways]
     [RequireComponent(typeof(Grid))]
     [RequireComponent(typeof(Tilemap))]
     [RequireComponent(typeof(TilemapRenderer))]
-    [HideScriptField]
     public class Structure : MonoBehaviour
     {
         public struct StructureData
@@ -46,10 +48,7 @@ namespace SmartRooms.Palette
 
         [Header("Editing setup")]
         [SerializeField] private bool _drawBorder = true;
-
         [SerializeField] private Color _borderColor = new (0.902f, 0.659f, 0.753f, 0.35f);
-        
-
         [SerializeField] private bool _drawPositionHandle = true;
         [SerializeField] private Color _positionHandleColor = new(0.22745098f, 0.47843137f, 0.972549f, 0.93f);
         [SerializeField] private float _positionHandleSize = 1f;
@@ -72,12 +71,10 @@ namespace SmartRooms.Palette
         [SerializeField] private List<Structure> _substructures;
 
         // Internals
-        private Grid _grid;
-        private Tilemap _tilemap;
-        private TilemapRenderer _tilemapRenderer;
-        private GameObject _cachedGameObject;
-        private string _cachedName;
-        private string _cachedId;
+        [HideInInspector] [SerializeField] private Tilemap _tilemap;
+        [HideInInspector] [SerializeField] private GameObject _cachedGameObject;
+        [HideInInspector] [SerializeField] private string _cachedName;
+        [HideInInspector] [SerializeField] private string _cachedId;
         
         // Properties
         private Tilemap Tilemap => _tilemap != null ? _tilemap : _tilemap = GetComponent<Tilemap>();

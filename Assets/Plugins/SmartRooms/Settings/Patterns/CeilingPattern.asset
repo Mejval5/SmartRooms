@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 498cb46d49224ac8b6d3b2af3da83a2e, type: 3}
+  m_Name: CeilingPattern
+  m_EditorClassIdentifier: SmartRooms:SmartRooms.Generator.Patterns:FoliagePattern
+  <Pattern>k__BackingField:
+    RuleTransform: 0
+    NeighborStates: 0200000001000000
+    NeighborPositions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+  <UniquePositions>k__BackingField: 1
+  <SpawnableObjects>k__BackingField:
+  - {fileID: 11400000, guid: 614c55bae550e82488caac6ee2e496a9, type: 2}
+  - {fileID: 11400000, guid: 6a734de00d411cc4ab1fe2ab87b70e6d, type: 2}

@@ -11,9 +11,11 @@ namespace SmartRooms.Rooms
     /// This represents a room which can be inserted into the generated layout after main generation occurs.
     /// It can be composed of two rooms if it contains a child room.
     /// </summary>
+#if UNITY_EDITOR
+    [HideScriptField]
+#endif
     [ExecuteAlways]
     [RequireComponent(typeof(Structure))]
-    [HideScriptField]
     public class SpecialRoom : MonoBehaviour
     {    
         public struct SpecialRoomData

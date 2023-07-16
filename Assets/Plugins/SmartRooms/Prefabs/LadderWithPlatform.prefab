@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3864982592607261325}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.5, y: 30.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -107,6 +107,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 3864982592607261326}
     m_Modifications:
+    - target: {fileID: 290033442004920382, guid: 9551837729b755f4aabc24d5b0b3bfb1, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5857277
+      objectReference: {fileID: 0}
+    - target: {fileID: 290033442004920382, guid: 9551837729b755f4aabc24d5b0b3bfb1, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.20713615
+      objectReference: {fileID: 0}
     - target: {fileID: 1943366862528149497, guid: 9551837729b755f4aabc24d5b0b3bfb1, type: 3}
       propertyPath: m_Name
       value: Ladder (2)
@@ -283,8 +291,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5285487971963145714, guid: ea7e54157114f1c4f947ea09844cf075, type: 3}
+    m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ea7e54157114f1c4f947ea09844cf075, type: 3}
 --- !u!4 &1266940029991337439 stripped

@@ -32,8 +32,10 @@ namespace SmartRooms.Editor
 
                 // Create a manager scriptable object in the Resources folder
                 SmartTileManager smartTileManager = CreateInstance<SmartTileManager>();
+#if UNITY_EDITOR
                 string uniquePath = AssetDatabase.GenerateUniqueAssetPath("Assets/Resources/SmartTileManager.asset");
                 AssetDatabase.CreateAsset(smartTileManager, uniquePath);
+#endif
                 _instance = smartTileManager;
 
                 return _instance;

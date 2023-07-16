@@ -12,5 +12,10 @@ namespace SmartRooms.Utils
         {
             return new Vector3(vector2Int.x, vector2Int.y, 0);
         }
+        
+        public static Vector2 ToVector2(this Vector3 vector)
+        {
+            return new Vector2(vector.x, vector.y);
+        }
     }
 }

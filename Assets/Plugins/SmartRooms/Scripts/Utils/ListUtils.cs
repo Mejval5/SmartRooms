@@ -1,21 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace SmartRooms.Utils
 {
     public class ListUtils
     {
-        public static List<T> ShuffleList<T>(List<T> _list)
+        public static IEnumerable<T> ShuffleList<T>(List<T> list)
         {
-            for (int i = 0; i < _list.Count; i++)
-            {
-                T temp = _list[i];
-                int randomIndex = Random.Range(i, _list.Count);
-                _list[i] = _list[randomIndex];
-                _list[randomIndex] = temp;
-            }
-
-            return _list;
+            return list.OrderBy(_ => Random.Range(0f, 1f));
         }
     }
 }

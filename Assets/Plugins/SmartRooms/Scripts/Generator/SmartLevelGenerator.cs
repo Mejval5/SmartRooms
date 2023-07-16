@@ -21,8 +21,10 @@ namespace SmartRooms.Generator
     /// <summary>
     /// A class that generates a level based on a LevelStyle.
     /// </summary>
-    [ExecuteAlways]
+#if UNITY_EDITOR
     [HideScriptField]
+#endif
+    [ExecuteAlways]
     public class SmartLevelGenerator : MonoBehaviour
     {
         private const int maxBuildIterations = 5000;

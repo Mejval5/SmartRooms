@@ -14,11 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <DefaultGroundTile>k__BackingField: {fileID: 11400000, guid: b2376460a6bef0d41a7d9b64935738ce, type: 2}
   <BackgroundSprite>k__BackingField: {fileID: 21300000, guid: 31c906bd2b3b41948ae8c4d4c69cdad7, type: 3}
-  <BackgroundColor>k__BackingField: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
+  <BackgroundColor>k__BackingField: {r: 0.06666667, g: 0.06666667, b: 0.06666667, a: 1}
   <SurroundingTile>k__BackingField: {fileID: 11400000, guid: 17eedce5ac233b44c8924f3cafd8b5c5, type: 2}
   <SurroundingMaterial>k__BackingField: {fileID: 2100000, guid: b46ac721a5c085941a0c1f973f7af6d6, type: 2}
   <SpawnableObjectPatterns>k__BackingField:
+  - {fileID: 11400000, guid: 96a24134ce70f8d4d9c506afae60a8c9, type: 2}
   - {fileID: 11400000, guid: b9416347f5fa1144db969abae131440d, type: 2}
+  - {fileID: 11400000, guid: 0a13197a87aa94c40afe6c57f8482416, type: 2}
+  - {fileID: 11400000, guid: 7bc18cded8654e541a397a642f8efcc9, type: 2}
   <LevelTileSize>k__BackingField: {x: 4, y: 4}
   <BuildModeDirection>k__BackingField: 0
   <Rooms>k__BackingField:

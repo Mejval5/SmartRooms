@@ -43,9 +43,10 @@ namespace SmartRooms.Palette
             {
                 return;
             }
-
+#if UNITY_EDITOR
             EditorApplication.delayCall -= FirstInitialize;
             EditorApplication.delayCall += FirstInitialize;
+#endif
         }
 
         protected void OnValidate()
@@ -72,7 +73,9 @@ namespace SmartRooms.Palette
 
         private void FirstInitialize()
         {
+#if UNITY_EDITOR
             EditorApplication.delayCall -= FirstInitialize;
+#endif
             
             flags = TileFlags.InstantiateGameObjectRuntimeOnly | TileFlags.LockColor;
             colliderType = ColliderType.None;
@@ -80,6 +83,7 @@ namespace SmartRooms.Palette
             _initialized = true;
         }
     }
+#if UNITY_EDITOR
     [CustomEditor(typeof(SmartTile))]
     public class SmartTileEditor : UnityEditor.Editor
     {
@@ -92,4 +96,5 @@ namespace SmartRooms.Palette
             smartTile.TryToInitialize();
         }
     }
+#endif
 }

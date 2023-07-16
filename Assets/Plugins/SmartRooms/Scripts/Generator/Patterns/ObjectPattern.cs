@@ -21,7 +21,7 @@ namespace SmartRooms.Generator.Patterns
             Pattern.Initialize();
         }
     }
-
+#if UNITY_EDITOR
     /// <summary>
     /// This class is based mostly on RuleTileEditor from Unity.
     /// </summary>
@@ -458,4 +458,5 @@ namespace SmartRooms.Generator.Patterns
             }
         }
     }
+#endif
 }

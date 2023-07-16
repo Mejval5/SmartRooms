@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16a7d2070ab5443d92a5ea07ff0e0645, type: 3}
+  m_Name: SOPlant5
+  m_EditorClassIdentifier: 
+  <ObjectPrefab>k__BackingField: {fileID: 6518215108646270561, guid: bb1730553c9994646aa87b5b2ffc8d01, type: 3}
+  <PositionOffset>k__BackingField: {x: 0, y: -0.5}
+  <RandomOffsetRangeX>k__BackingField: {x: -0.3, y: 0.3}
+  <RandomOffsetRangeY>k__BackingField: {x: 0, y: 0}
+  <RotationOffset>k__BackingField: 0
+  <FlipOnX>k__BackingField: 0
+  <FlipOnY>k__BackingField: 0
+  <SpawnChance>k__BackingField: 58
+  <MaxSpawned>k__BackingField: 500
+  <DontSpawnOnEdge>k__BackingField: 0
+  <IgnoreSafeAreas>k__BackingField: 0
+  <FailChance>k__BackingField: 45
+  <DefaultPoolCapacity>k__BackingField: 100
+  <MaxPoolSize>k__BackingField: 10000

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using SmartRooms.Levels;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -175,6 +176,7 @@ namespace SmartRooms.Generator
             {
                 _objectHolder.DestroyAllChildren();
             }
+            
             _spawnedItems = new Dictionary<SpawnableObject, int>();
         }
 
@@ -241,8 +243,8 @@ namespace SmartRooms.Generator
 
             GeneratePerlinNoiseOffset();
             float threshold = spawnableObject.SpawnChance;
-            ValidLocations = ListUtils.ShuffleList(ValidLocations);
-            foreach (ValidLocation location in ValidLocations)
+            IEnumerable<ValidLocation> validLocations = ListUtils.ShuffleList(ValidLocations);
+            foreach (ValidLocation location in validLocations)
             {
                 _flipAxis = location.FlipDir;
                 bool perlinValid = ReadPerlinAtPosition(location.Position.x, location.Position.y, threshold);
@@ -254,17 +256,13 @@ namespace SmartRooms.Generator
                         _spawnedItems[spawnableObject] += 1;
                     }
                 }
+                
+                ValidLocations.RemoveAll(x => x.Position == location.Position && x.FlipDir == location.FlipDir);
             }
         }
 
         public virtual bool SpawnFoliageAtPosition(int x, int y, SpawnableObject spawnableObject)
         {
-            GameObject spawnedItem = spawnableObject.SpawnObject(_objectHolder);
-            if (spawnedItem == null)
-            {
-                return false;
-            }
-
             if (spawnableObject.DontSpawnOnEdge && (x < 0 || x > _map.size.x - 1 || y < 0 || y > _map.size.y - 1))
             {
                 return false;
@@ -272,6 +270,12 @@ namespace SmartRooms.Generator
 
             float rand = Random.Range(0f, 100f);
             if (rand < spawnableObject.FailChance)
+            {
+                return false;
+            }
+            
+            GameObject spawnedItem = spawnableObject.SpawnObject(_objectHolder);
+            if (spawnedItem == null)
             {
                 return false;
             }
@@ -423,7 +427,7 @@ namespace SmartRooms.Generator
             return pixel.maxColorComponent < threshold / 100f;
         }
     }
-
+#if UNITY_EDITOR
     [CustomEditor(typeof(SpawnableObjectPatternGenerator))]
     internal class SpawnableObjectPatternGeneratorEditor : UnityEditor.Editor
     {
@@ -438,4 +442,5 @@ namespace SmartRooms.Generator
             }
         }
     }
+#endif
 }

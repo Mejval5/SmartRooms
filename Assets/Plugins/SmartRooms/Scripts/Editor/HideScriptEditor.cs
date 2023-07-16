@@ -4,6 +4,7 @@ using System;
 
 namespace SmartRooms.Editor
 {
+#if UNITY_EDITOR
     /// <summary>
     /// Custom attribute which hides the script field in the Unity inspector.
     /// </summary>
@@ -37,4 +38,5 @@ namespace SmartRooms.Editor
             }
         }
     }
+#endif
 }

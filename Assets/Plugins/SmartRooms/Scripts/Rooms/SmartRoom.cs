@@ -9,9 +9,11 @@ namespace SmartRooms.Rooms
     /// This represents a room which is used for generating the level layout.
     /// It has an entrance by default.
     /// </summary>
+#if UNITY_EDITOR
+    [HideScriptField]
+#endif
     [ExecuteAlways]
     [RequireComponent(typeof(Structure))]
-    [HideScriptField]
     public class SmartRoom : MonoBehaviour
     {
         public struct RoomData

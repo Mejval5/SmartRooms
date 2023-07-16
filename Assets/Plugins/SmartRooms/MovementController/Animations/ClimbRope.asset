@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68c4f7c00eaf86b4baa85a30ab291174, type: 3}
+  m_Name: ClimbRope
+  m_EditorClassIdentifier: 
+  frames:
+  - {fileID: -1744600903, guid: 81a1be18b4120544885d0b2243a6c18b, type: 3}
+  - {fileID: 1508511372, guid: 81a1be18b4120544885d0b2243a6c18b, type: 3}
+  - {fileID: 1936468295, guid: 81a1be18b4120544885d0b2243a6c18b, type: 3}
+  - {fileID: 880294888, guid: 81a1be18b4120544885d0b2243a6c18b, type: 3}
+  fps: 4
+  looping: 1
+  pingPong: 0
+  showBlankFrameAtTheEnd: 0

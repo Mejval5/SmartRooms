@@ -42,7 +42,8 @@ namespace SmartRooms.Palette
                 tileData.sprite = null;
             }
         }
-
+        
+#if UNITY_EDITOR
         protected void Awake()
         {
             EditorUtility.SetDirty(this);
@@ -313,8 +314,10 @@ namespace SmartRooms.Palette
             AssetDatabase.MoveAsset(spriteName, newName);
             AssetDatabase.Refresh();
         }
+#endif
     }
 
+#if UNITY_EDITOR
     [CustomEditor(typeof(QuantumTile), true)]
     public class QuantumTileEditor : UnityEditor.Editor
     {
@@ -352,4 +355,5 @@ namespace SmartRooms.Palette
             }
         }
     }
+#endif
 }
