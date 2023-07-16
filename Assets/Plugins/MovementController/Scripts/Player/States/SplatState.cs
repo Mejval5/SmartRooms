@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MovementController
+namespace MovementController.Player.States
 {
     /// <summary>
     /// Currently the state for when we get squished by a falling block. We'll see if this becomes a generic dead state

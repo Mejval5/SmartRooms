@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MovementController
+namespace MovementController.Player.States
 {
     [RequireComponent(typeof(Player))]
     public abstract class State : MonoBehaviour

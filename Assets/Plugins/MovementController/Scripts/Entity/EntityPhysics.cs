@@ -1,6 +1,7 @@
+using MovementController.Collision;
 using UnityEngine;
 
-namespace MovementController
+namespace MovementController.Entity
 {
     /// <summary>
     /// Our custom "Rigidbody2D" class.

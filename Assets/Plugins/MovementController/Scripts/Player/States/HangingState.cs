@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MovementController
+namespace MovementController.Player.States
 {
     /// <summary>
     /// The state we're in when we hang from a tile or block.

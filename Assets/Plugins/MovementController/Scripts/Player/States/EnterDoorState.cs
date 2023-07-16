@@ -1,8 +1,9 @@
 using System.Collections;
+using MovementController.Utils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace MovementController
+namespace MovementController.Player.States
 {
     /// <summary>
     /// The state we're in when we're entering a door (exiting a level).
@@ -38,7 +39,7 @@ namespace MovementController
 
         private IEnumerator EnterDoor()
         {
-            transform.position = new Vector2(player._exitDoor.transform.position.x + ExtensionMethods.TileWidth / 2f, player._exitDoor.transform.position.y);
+            transform.position = new Vector2(player._exitDoor.transform.position.x + MovementUtils.TileWidth / 2f, player._exitDoor.transform.position.y);
 
             player.Visuals.animator.Play("EnterDoor");
 

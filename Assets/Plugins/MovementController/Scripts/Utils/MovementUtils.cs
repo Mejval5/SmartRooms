@@ -1,12 +1,9 @@
 using UnityEngine;
 
-// TODO: Create a github UPM package from this so I can share it between my projects.
-namespace MovementController
+namespace MovementController.Utils
 {
-    public static class ExtensionMethods
+    public static class MovementUtils
     {
-        // Tile width and height. I left these at the default Spelunky values.
-        // NB: Changing these involves redoing all sprite assets.
         public const int TileWidth = 1;
         public const int TileHeight = 1;
 

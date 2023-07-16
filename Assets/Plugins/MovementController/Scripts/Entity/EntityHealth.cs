@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace MovementController
+namespace MovementController.Entity
 {
     public class EntityHealth : MonoBehaviour
     {

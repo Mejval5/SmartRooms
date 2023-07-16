@@ -1,7 +1,8 @@
 using System.Collections.Generic;
+using MovementController.Utils;
 using UnityEngine;
 
-namespace MovementController
+namespace MovementController.Player.States
 {
     /// <summary>
     /// The state we're in when we're climbing a ladder or a rope.
@@ -150,7 +151,7 @@ namespace MovementController
                 float xPos = ladderCollider.transform.position.x;
                 if (ladderCollider.CompareTag("Ladder"))
                 {
-                    xPos += ExtensionMethods.TileWidth / 2f;
+                    xPos += MovementUtils.TileWidth / 2f;
                 }
 
                 float currentDistance = Mathf.Abs(transform.position.x - xPos);

@@ -1,4 +1,4 @@
-namespace MovementController
+namespace MovementController.Player.States
 {
     public class StateMachine
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MovementController
+namespace MovementController.Level
 {
     public class Exit : MonoBehaviour
     {
@@ -13,7 +13,7 @@ namespace MovementController
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            Player player = other.GetComponent<Player>();
+            Player.Player player = other.GetComponent<Player.Player>();
             if (player != null)
             {
                 buttonPromptObject.SetActive(true);
@@ -23,7 +23,7 @@ namespace MovementController
 
         private void OnTriggerExit2D(Collider2D other)
         {
-            Player player = other.GetComponent<Player>();
+            Player.Player player = other.GetComponent<Player.Player>();
             if (player != null)
             {
                 buttonPromptObject.SetActive(false);

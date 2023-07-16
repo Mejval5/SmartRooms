@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace MovementController
+namespace MovementController.Player
 {
     public class CameraFollow : MonoBehaviour
     {

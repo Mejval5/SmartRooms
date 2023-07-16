@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MovementController
+namespace MovementController.Player
 {
     /// <summary>
     /// TODO: Replace with new input system. To be honest I thought I had done that ages ago.

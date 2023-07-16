@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace MovementController
+namespace MovementController.Entity
 {
     /// <summary>
     /// An entity in our game world.

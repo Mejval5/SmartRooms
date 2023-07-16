@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace MovementController
+namespace MovementController.Player
 {
     [System.Serializable]
     public class UnityIntEvent : UnityEvent<int>

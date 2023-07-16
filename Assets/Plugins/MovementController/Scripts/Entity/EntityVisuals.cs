@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MovementController
+namespace MovementController.Entity
 {
     public class EntityVisuals : MonoBehaviour
     {

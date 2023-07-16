@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MovementController
+namespace MovementController.Collision
 {
     /// <summary>
     /// Info about a collision event.

@@ -1,9 +1,11 @@
 using System.Collections;
+using MovementController.Level;
+using MovementController.Player.States;
 using UnityEngine;
 
-namespace MovementController
+namespace MovementController.Player
 {
-    public class Player : Entity
+    public class Player : Entity.Entity
     {
         public PlayerInput Input { get; private set; }
         public PlayerAudio Audio { get; private set; }

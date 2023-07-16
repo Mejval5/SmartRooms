@@ -1,6 +1,8 @@
+using MovementController.Collision;
+using MovementController.Entity;
 using UnityEngine;
 
-namespace MovementController
+namespace MovementController.Player.States
 {
     /// <summary>
     /// The state for whenever we're in the air, whether it's from jumping, falling or anything else.

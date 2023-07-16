@@ -1,6 +1,7 @@
+using MovementController.Entity;
 using UnityEngine;
 
-namespace MovementController
+namespace MovementController.Player
 {
     [RequireComponent(typeof(Collider2D))]
     public class DamageTrigger : MonoBehaviour

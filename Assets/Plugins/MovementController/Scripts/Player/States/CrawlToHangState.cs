@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace MovementController
+namespace MovementController.Player.States
 {
     /// <summary>
     /// This state is essentially just a transition to the HangingState, but you can only enter this state by crawling

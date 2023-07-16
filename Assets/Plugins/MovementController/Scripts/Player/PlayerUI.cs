@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace MovementController
+namespace MovementController.Player
 {
     [RequireComponent(typeof(Player))]
     public class PlayerUI : MonoBehaviour

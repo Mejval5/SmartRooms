@@ -1,11 +1,13 @@
-﻿using UnityEngine;
+﻿using MovementController.Collision;
+using MovementController.Utils;
+using UnityEngine;
 
-namespace MovementController
+namespace MovementController.Level
 {
     /// <summary>
     /// A pushable block.
     /// </summary>
-    public class Block : Entity
+    public class Block : Entity.Entity
     {
         public Vector2 gravity = new(0, -30f);
         public AudioClip landClip;
@@ -30,7 +32,7 @@ namespace MovementController
             if (!Physics.collisionInfo.down)
             {
                 Vector3 centerOfBlock = transform.position + (Vector3)Physics.Collider.offset;
-                Vector3 lowerLeftCornerOfTileWeAreIn = ExtensionMethods.GetPositionOfLowerLeftOfNearestTile(centerOfBlock);
+                Vector3 lowerLeftCornerOfTileWeAreIn = MovementUtils.GetPositionOfLowerLeftOfNearestTile(centerOfBlock);
                 transform.position = new Vector3(lowerLeftCornerOfTileWeAreIn.x + 0.5f - Physics.Collider.offset.x, transform.position.y, transform.position.z);
                 _velocity.x = 0;
             }
@@ -61,7 +63,7 @@ namespace MovementController
             {
                 if (collisionInfo.colliderVertical.CompareTag("Player"))
                 {
-                    Player player = collisionInfo.colliderVertical.GetComponent<Player>();
+                    Player.Player player = collisionInfo.colliderVertical.GetComponent<Player.Player>();
                     player.Splat();
                 }
                 else

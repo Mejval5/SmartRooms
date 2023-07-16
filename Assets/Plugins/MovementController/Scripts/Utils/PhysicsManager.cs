@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MovementController
+namespace MovementController.Utils
 {
     public static class PhysicsManager
     {

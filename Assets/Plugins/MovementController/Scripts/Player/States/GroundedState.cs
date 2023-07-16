@@ -1,6 +1,8 @@
+using MovementController.Collision;
+using MovementController.Level;
 using UnityEngine;
 
-namespace MovementController
+namespace MovementController.Player.States
 {
     /// <summary>
     /// The state for whenever we're on the ground.
