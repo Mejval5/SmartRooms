@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16a7d2070ab5443d92a5ea07ff0e0645, type: 3}
-  m_Name: ShadowObject
+  m_Name: CornerShadow
   m_EditorClassIdentifier: 
-  <ObjectPrefab>k__BackingField: {fileID: 1641158354287827461, guid: 8664f2473379d0c4ab313f1a78f43716, type: 3}
+  <ObjectPrefab>k__BackingField: {fileID: 7879208798840429042, guid: 20cae14de01a64b41a2386d7ddfccd02, type: 3}
   <PositionOffset>k__BackingField: {x: 0, y: 0}
   <RandomOffsetRangeX>k__BackingField: {x: 0, y: 0}
   <RandomOffsetRangeY>k__BackingField: {x: 0, y: 0}

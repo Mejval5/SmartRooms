@@ -13,13 +13,12 @@ MonoBehaviour:
   m_Name: CornerPattern
   m_EditorClassIdentifier: SmartRooms:SmartRooms.Generator.Patterns:FoliagePattern
   <Pattern>k__BackingField:
-    RuleTransform: 0
-    NeighborStates: 0100000001000000020000000200000001000000
+    RuleTransform: 3
+    NeighborStates: 010000000100000002000000
     NeighborPositions:
     - {x: 1, y: 0, z: 0}
     - {x: 0, y: 1, z: 0}
-    - {x: -1, y: 0, z: 0}
-    - {x: 0, y: -1, z: 0}
     - {x: 0, y: 0, z: 0}
+  <UniquePositions>k__BackingField: 0
   <SpawnableObjects>k__BackingField:
   - {fileID: 11400000, guid: 68f0f07ed732de8458953173dedf1231, type: 2}

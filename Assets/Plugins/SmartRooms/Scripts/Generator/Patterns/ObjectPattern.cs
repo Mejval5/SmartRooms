@@ -11,6 +11,9 @@ namespace SmartRooms.Generator.Patterns
     public class ObjectPattern : ScriptableObject
     {
         [field: SerializeField] public SpawningPattern Pattern { get; private set; }
+        
+        [Tooltip("When set to true then matching positions are only used once regardless of rotation or flipping.")]
+        [field: SerializeField] public bool UniquePositions { get; private set; } = true;
         [field: SerializeField] public List<SpawnableObject> SpawnableObjects { get; private set; }
 
         public void Initialize()
@@ -34,10 +37,12 @@ namespace SmartRooms.Generator.Patterns
         private ObjectPattern pattern => target as ObjectPattern;
 
         private SerializedProperty _foliageItems;
+        private SerializedProperty _uniquePositions;
 
         private void OnEnable()
         {
             _foliageItems = serializedObject.FindProperty("<SpawnableObjects>k__BackingField");
+            _uniquePositions = serializedObject.FindProperty("<UniquePositions>k__BackingField");
         }
 
         public override void OnInspectorGUI()
@@ -90,6 +95,7 @@ namespace SmartRooms.Generator.Patterns
             }
 
             GUILayout.Space(12);
+            EditorGUILayout.PropertyField(_uniquePositions);
             EditorGUILayout.PropertyField(_foliageItems);
 
             if (EditorGUI.EndChangeCheck())

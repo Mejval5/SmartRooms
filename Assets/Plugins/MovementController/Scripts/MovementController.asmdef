@@ -1,0 +1,16 @@
+{
+    "name": "MovementController",
+    "rootNamespace": "",
+    "references": [
+        "GUID:56ab78e5d5ceec34db40fa992a7bd881"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

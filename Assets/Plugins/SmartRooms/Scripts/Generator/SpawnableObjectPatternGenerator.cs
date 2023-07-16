@@ -213,7 +213,7 @@ namespace SmartRooms.Generator
                 int _y = (int)Mathf.Pow(-1, j + yOffset);
 
                 _flipAxis = new Vector2Int(_x, _y);
-                GeneratePerAxis(objectPattern);
+                IterateThroughMapWithPattern(objectPattern);
             }
             
             TryToLogGenerationTime("[SpawnableObjectPatternGenerator] Generate Per Axis took: " + watch.ElapsedMilliseconds + "ms");
@@ -225,17 +225,6 @@ namespace SmartRooms.Generator
             }
             
             TryToLogGenerationTime("[SpawnableObjectPatternGenerator] Foliage Spawning Cycle took: " + watch.ElapsedMilliseconds + "ms");
-        }
-
-        private void GeneratePerAxis(ObjectPattern objectPattern)
-        {
-            SpawningPattern pattern = objectPattern.Pattern;
-            if (pattern == null)
-            {
-                Debug.Log(name);
-            }
-
-            IterateThroughMapWithPattern(pattern);
         }
 
         public virtual void SpawningCycle(SpawnableObject spawnableObject)
@@ -321,22 +310,34 @@ namespace SmartRooms.Generator
             return new Vector2(_x, _y);
         }
 
-        private void IterateThroughMapWithPattern(SpawningPattern pattern)
+        private void IterateThroughMapWithPattern(ObjectPattern objectPattern)
         {
+            SpawningPattern spawningPattern = objectPattern.Pattern;
+            if (objectPattern == null)
+            {
+                Debug.Log(name);
+            }
+            
             for (int x = 0; x < _map.size.x; x++)
             for (int y = 0; y < _map.size.y; y++)
-                if (CheckMapPosAtCoords(x , y, pattern))
+                if (CheckMapPosAtCoords(x , y, spawningPattern))
                 {
                     Vector2Int validPoint = new(x, y);
-                    ValidLocation location = new ValidLocation();
-                    location.Position = validPoint;
-                    location.FlipDir = _flipAxis;
-                    bool isUnique = true;
-                    foreach (ValidLocation loc in ValidLocations)
+                    ValidLocation location = new ()
                     {
-                        if (location.Position.x == loc.Position.x && location.Position.y == loc.Position.y)
+                        Position = validPoint,
+                        FlipDir = _flipAxis
+                    };
+                    
+                    bool isUnique = true;
+                    if (objectPattern.UniquePositions)
+                    {
+                        foreach (ValidLocation loc in ValidLocations)
                         {
-                            isUnique = false;
+                            if (location.Position.x == loc.Position.x && location.Position.y == loc.Position.y)
+                            {
+                                isUnique = false;
+                            }
                         }
                     }
 
@@ -400,7 +401,7 @@ namespace SmartRooms.Generator
                 return _cachedMap[x, y];
             }
 
-            return BlockState.NULL;
+            return BlockState.Block;
         }
 
         private void GeneratePerlinNoiseOffset()
