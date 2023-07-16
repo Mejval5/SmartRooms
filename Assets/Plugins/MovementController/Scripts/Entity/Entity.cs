@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
-namespace Spelunky {
-
+namespace MovementController
+{
     /// <summary>
     /// An entity in our game world.
     ///
@@ -16,18 +16,17 @@ namespace Spelunky {
     /// We'll see. Maybe I change my mind again later.
     /// </summary>
     [RequireComponent(typeof(EntityPhysics), typeof(EntityHealth), typeof(EntityVisuals))]
-    public class Entity : MonoBehaviour {
-
+    public class Entity : MonoBehaviour
+    {
         public EntityPhysics Physics { get; private set; }
         public EntityHealth Health { get; private set; }
         public EntityVisuals Visuals { get; private set; }
 
-        public virtual void Awake() {
+        public virtual void Awake()
+        {
             Physics = GetComponent<EntityPhysics>();
             Health = GetComponent<EntityHealth>();
             Visuals = GetComponent<EntityVisuals>();
         }
-
     }
-
 }

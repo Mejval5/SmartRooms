@@ -1,14 +1,14 @@
 using UnityEngine;
 
-namespace Spelunky {
-
+namespace MovementController
+{
     /// <summary>
     /// Info about a collision event.
     ///
     /// Similar to Collision2D for the built-in physics system.
     /// </summary>
-    public struct CollisionInfo {
-
+    public struct CollisionInfo
+    {
         public bool up;
         public bool down;
         public bool left;
@@ -20,7 +20,8 @@ namespace Spelunky {
         public bool becameGroundedThisFrame;
         public bool fallingThroughPlatform;
 
-        public void Reset() {
+        public void Reset()
+        {
             up = false;
             down = false;
             left = false;
@@ -29,7 +30,5 @@ namespace Spelunky {
             colliderVertical = null;
             becameGroundedThisFrame = false;
         }
-
     }
-
 }

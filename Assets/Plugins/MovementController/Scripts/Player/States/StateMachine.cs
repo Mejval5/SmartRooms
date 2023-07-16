@@ -1,17 +1,21 @@
-namespace Spelunky {
-
-    public class StateMachine {
-
+namespace MovementController
+{
+    public class StateMachine
+    {
         public State CurrentState { get; private set; }
         public State PreviousState { get; private set; }
 
-        public bool AttemptToChangeState(State newState) {
-            if (CurrentState != null) {
-                if (newState == CurrentState) {
+        public bool AttemptToChangeState(State newState)
+        {
+            if (CurrentState != null)
+            {
+                if (newState == CurrentState)
+                {
                     return false;
                 }
 
-                if (!newState.CanEnterState()) {
+                if (!newState.CanEnterState())
+                {
                     return false;
                 }
 
@@ -26,7 +30,5 @@ namespace Spelunky {
 
             return true;
         }
-
     }
-
 }

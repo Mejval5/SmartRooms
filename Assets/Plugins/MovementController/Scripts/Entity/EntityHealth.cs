@@ -2,56 +2,63 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Spelunky {
-
-    public class EntityHealth : MonoBehaviour {
-
+namespace MovementController
+{
+    public class EntityHealth : MonoBehaviour
+    {
         public GameObject bloodParticles;
 
-        public UnityEvent HealthChangedEvent { get; private set; } = new UnityEvent();
+        public UnityEvent HealthChangedEvent { get; private set; } = new();
 
         public int maxHealth;
         public int CurrentHealth { get; private set; }
 
-        [Header("Invulnerability")]
-        public SpriteRenderer spriteRenderer;
+        [Header("Invulnerability")] public SpriteRenderer spriteRenderer;
         public float invulnerabilityDuration;
         public int numberOfInvulnerabilityFlashes = 10;
         public Color invulnerabilityFlashColor;
         public bool isInvulnerable;
 
-        private void Awake() {
+        private void Awake()
+        {
             SetHealth(maxHealth);
         }
 
-        public void TakeDamage(int damage) {
-            if (isInvulnerable) {
+        public void TakeDamage(int damage)
+        {
+            if (isInvulnerable)
+            {
                 return;
             }
-            
+
             Instantiate(bloodParticles, transform.position, Quaternion.identity);
 
             CurrentHealth -= damage;
-            if (CurrentHealth < 0) {
+            if (CurrentHealth < 0)
+            {
                 CurrentHealth = 0;
             }
 
             HealthChangedEvent?.Invoke();
-            
-            if (CurrentHealth <= 0) {
+
+            if (CurrentHealth <= 0)
+            {
                 Die();
             }
-            else {
+            else
+            {
                 StartCoroutine(InvulnerabilityTime());
             }
         }
 
-        private void SetHealth(int value) {
+        private void SetHealth(int value)
+        {
             CurrentHealth = value;
             HealthChangedEvent?.Invoke();
         }
 
-        private void Die() {
+        private void Die()
+        {
             Destroy(gameObject);
         }
 
@@ -59,16 +66,18 @@ namespace Spelunky {
         /// TODO: How do we ignore collisions between the player and enemies when this happens?
         /// </summary>
         /// <returns></returns>
-        private IEnumerator InvulnerabilityTime() {
+        private IEnumerator InvulnerabilityTime()
+        {
             isInvulnerable = true;
 
             Color originalColor = spriteRenderer.color;
             float flashInterval = invulnerabilityDuration / numberOfInvulnerabilityFlashes;
             float _invulnerabilityTimer = 0;
 
-            while (_invulnerabilityTimer < invulnerabilityDuration) {
+            while (_invulnerabilityTimer < invulnerabilityDuration)
+            {
                 _invulnerabilityTimer += flashInterval;
-                
+
                 spriteRenderer.color = invulnerabilityFlashColor;
                 yield return new WaitForSeconds(flashInterval / 2);
                 spriteRenderer.color = originalColor;
@@ -78,5 +87,4 @@ namespace Spelunky {
             isInvulnerable = false;
         }
     }
-
 }

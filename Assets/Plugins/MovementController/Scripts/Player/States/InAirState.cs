@@ -1,7 +1,7 @@
 using UnityEngine;
 
-namespace Spelunky {
-
+namespace MovementController
+{
     /// <summary>
     /// The state for whenever we're in the air, whether it's from jumping, falling or anything else.
     /// </summary>
@@ -16,16 +16,19 @@ namespace Spelunky {
         private Collider2D _lastColliderToSee;
 
         [HideInInspector] public float lastJumpAttemptTime = float.MinValue;
-        
-        public override void EnterState() {
+
+        public override void EnterState()
+        {
             player.Physics.OnCollisionEnterEvent.AddListener(OnEntityPhysicsCollisionEnter);
         }
 
-        public override void ExitState() {
+        public override void ExitState()
+        {
             player.Physics.OnCollisionEnterEvent.RemoveListener(OnEntityPhysicsCollisionEnter);
         }
 
-        public override void UpdateState() {
+        public override void UpdateState()
+        {
             player.groundedGraceTimer += Time.deltaTime;
 
             // TODO: We currently only have a single sprite for anything "air" related. Later on we would probably
@@ -36,16 +39,20 @@ namespace Spelunky {
             HandleEdgeGrabbing();
         }
 
-        public override void OnDirectionalInput(Vector2 input) {
+        public override void OnDirectionalInput(Vector2 input)
+        {
             base.OnDirectionalInput(input);
 
-            if (player.directionalInput.y > 0) {
+            if (player.directionalInput.y > 0)
+            {
                 player.stateMachine.AttemptToChangeState(player.climbingState);
             }
         }
 
-        public override void OnJumpInputDown() {
-            if (player.groundedGraceTimer > player.groundedGracePeriod) {
+        public override void OnJumpInputDown()
+        {
+            if (player.groundedGraceTimer > player.groundedGracePeriod)
+            {
                 lastJumpAttemptTime = Time.time;
                 return;
             }
@@ -53,20 +60,24 @@ namespace Spelunky {
             base.OnJumpInputDown();
         }
 
-        public override void ChangePlayerVelocity(ref Vector2 velocity) {
-            if (_hitHead) {
+        public override void ChangePlayerVelocity(ref Vector2 velocity)
+        {
+            if (_hitHead)
+            {
                 velocity.y = 0;
                 _hitHead = false;
             }
 
-            if (_bouncedOnEnemy) {
+            if (_bouncedOnEnemy)
+            {
                 // TODO: This should not be a full jump. Maybe half height or something.
                 velocity.y = player._maxJumpVelocity;
                 _bouncedOnEnemy = false;
             }
         }
 
-        private void HandleEdgeGrabbing() {
+        private void HandleEdgeGrabbing()
+        {
             Vector2 direction = Vector2.right * player.Visuals.facingDirection;
 
             // This was just what felt right.
@@ -84,8 +95,8 @@ namespace Spelunky {
 
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, direction, rayLength, player.edgeGrabLayerMask);
             Debug.DrawRay(rayOrigin, direction * rayLength, Color.cyan);
-            
-            
+
+
             Debug.DrawLine(rayTip, grabPointCheck, Color.red);
 
             // We're currently trying to move into a wall either on the left or on the right.
@@ -99,7 +110,8 @@ namespace Spelunky {
             }
 
             // If we have the glove we can grab anything.
-            if ((movingIntoWallOnTheLeft || movingIntoWallOnTheRight) && player.Inventory.hasClimbingGlove) {
+            if ((movingIntoWallOnTheLeft || movingIntoWallOnTheRight) && player.Inventory.hasClimbingGlove)
+            {
                 // TODO: How do we pass data to a state?
                 player.hangingState.colliderToHangFrom = hit.collider;
                 player.hangingState.grabbedWallUsingGlove = true;
@@ -107,15 +119,16 @@ namespace Spelunky {
                 _lastColliderToSee = hit.collider;
                 return;
             }
-            
+
             // Otherwise we can only grab ledges (tile corners).
             // lastEdgeGrabRayCastHit.collider == null ensures we'll only grab
             // an actual ledge with air above it and only when we're falling downwards.
-            if (CanGrab(playerPointCheck, grabPointCheck) && _lastColliderToSee == null) {
+            if (CanGrab(playerPointCheck, grabPointCheck) && _lastColliderToSee == null)
+            {
                 player.hangingState.colliderToHangFrom = hit.collider;
                 player.stateMachine.AttemptToChangeState(player.hangingState);
             }
-            
+
             _lastColliderToSee = hit.collider;
         }
 
@@ -125,10 +138,13 @@ namespace Spelunky {
             Collider2D hitBlockBlock = Physics2D.OverlapPoint(grabPointCheck, player.edgeGrabLayerMask | solidBlockMask);
             return hitBlockPlayer == null && hitBlockBlock == null;
         }
-        
-        private void OnEntityPhysicsCollisionEnter(CollisionInfo collisionInfo) {
-            if (collisionInfo.becameGroundedThisFrame) {
-                if (collisionInfo.colliderVertical.CompareTag("Enemy")) {
+
+        private void OnEntityPhysicsCollisionEnter(CollisionInfo collisionInfo)
+        {
+            if (collisionInfo.becameGroundedThisFrame)
+            {
+                if (collisionInfo.colliderVertical.CompareTag("Enemy"))
+                {
                     // TODO: Show some blood particles, play a sound etc. when this happened. Can maybe be generic in
                     // the EntityHealth class for all damage? At least for now.
                     collisionInfo.colliderVertical.GetComponent<EntityHealth>().TakeDamage(1);
@@ -138,20 +154,21 @@ namespace Spelunky {
                     // before it's applied.
                     _bouncedOnEnemy = true;
                 }
-                else if (collisionInfo.colliderVertical.CompareTag("Spikes")) {
+                else if (collisionInfo.colliderVertical.CompareTag("Spikes"))
+                {
                     player.Splat();
                 }
-                else {
+                else
+                {
                     player.stateMachine.AttemptToChangeState(player.groundedState);
                 }
             }
 
-            if (collisionInfo.up) {
+            if (collisionInfo.up)
+            {
                 // Same as _bouncedOnEnemy.
                 _hitHead = true;
             }
         }
-
     }
-
 }

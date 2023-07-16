@@ -1,10 +1,10 @@
 using System;
 using UnityEngine.Events;
 
-namespace Spelunky {
-
+namespace MovementController
+{
     [Serializable]
-    public class CollisionInfoEvent : UnityEvent<CollisionInfo> {
+    public class CollisionInfoEvent : UnityEvent<CollisionInfo>
+    {
     }
-
 }

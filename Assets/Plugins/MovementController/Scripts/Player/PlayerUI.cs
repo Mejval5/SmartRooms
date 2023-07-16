@@ -2,10 +2,11 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Spelunky {
-
+namespace MovementController
+{
     [RequireComponent(typeof(Player))]
-    public class PlayerUI : MonoBehaviour {
+    public class PlayerUI : MonoBehaviour
+    {
         private Player _player;
         private Text _lifeAmountText;
         private Text _bombAmountText;
@@ -24,7 +25,8 @@ namespace Spelunky {
 
         private GameObject _canvasObject;
 
-        private void Awake() {
+        private void Awake()
+        {
             // _player = GetComponent<Player>();
             // _lifeAmountText = GameObject.Find("LifeAmountText").GetComponent<Text>();
             // _bombAmountText = GameObject.Find("BombAmountText").GetComponent<Text>();
@@ -44,7 +46,8 @@ namespace Spelunky {
             // _canvasObject.SetActive(true);
         }
 
-        private void Update() {
+        private void Update()
+        {
             // if (_currentGoldAmount <= 0) {
             //     _goldAddTimer = 0;
             //     _currentGoldAmountText.gameObject.SetActive(false);
@@ -67,19 +70,23 @@ namespace Spelunky {
             // _intervalTimer = 0;
         }
 
-        private void OnHealthChanged() {
+        private void OnHealthChanged()
+        {
             _lifeAmountText.text = _player.Health.CurrentHealth.ToString();
         }
 
-        private void OnBombsChanged() {
+        private void OnBombsChanged()
+        {
             _bombAmountText.text = _player.Inventory.numberOfBombs.ToString();
         }
 
-        private void OnRopesChanged() {
+        private void OnRopesChanged()
+        {
             _ropeAmountText.text = _player.Inventory.numberOfRopes.ToString();
         }
 
-        private void OnGoldChanged(int amount) {
+        private void OnGoldChanged(int amount)
+        {
             // _goldAddTimer = 0;
             // _intervalTimer = 0;
             _currentGoldAmount += amount;
@@ -88,7 +95,8 @@ namespace Spelunky {
             _totalGoldAmountText.text = _totalGoldAmount.ToString();
         }
 
-        private void UpdateUIGoldAmount() {
+        private void UpdateUIGoldAmount()
+        {
             int goldToAdd = goldToAddPerInterval > _currentGoldAmount ? _currentGoldAmount : goldToAddPerInterval;
             _currentGoldAmount -= goldToAdd;
             _totalGoldAmount += goldToAdd;
@@ -96,5 +104,4 @@ namespace Spelunky {
             _totalGoldAmountText.text = _totalGoldAmount.ToString();
         }
     }
-
 }

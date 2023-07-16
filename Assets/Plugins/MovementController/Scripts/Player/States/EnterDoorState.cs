@@ -2,36 +2,42 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Spelunky {
-
+namespace MovementController
+{
     /// <summary>
     /// The state we're in when we're entering a door (exiting a level).
     /// </summary>
-    public class EnterDoorState : State {
-
+    public class EnterDoorState : State
+    {
         public AudioClip enterDoorClip;
 
-        public override bool CanEnterState() {
-            if (player._exitDoor == null) {
+        public override bool CanEnterState()
+        {
+            if (player._exitDoor == null)
+            {
                 return false;
             }
 
             return true;
         }
 
-        public override void EnterState() {
+        public override void EnterState()
+        {
             StartCoroutine(EnterDoor());
         }
 
-        public override void ChangePlayerVelocity(ref Vector2 velocity) {
+        public override void ChangePlayerVelocity(ref Vector2 velocity)
+        {
             velocity = Vector2.zero;
         }
 
-        public override bool LockInput() {
+        public override bool LockInput()
+        {
             return true;
         }
 
-        private IEnumerator EnterDoor() {
+        private IEnumerator EnterDoor()
+        {
             transform.position = new Vector2(player._exitDoor.transform.position.x + ExtensionMethods.TileWidth / 2f, player._exitDoor.transform.position.y);
 
             player.Visuals.animator.Play("EnterDoor");
@@ -41,7 +47,8 @@ namespace Spelunky {
             Color color = player.Visuals.renderer.color;
             float animationLength = player.Visuals.animator.GetAnimationLength("EnterDoor");
             float t = 0;
-            while (t <= animationLength) {
+            while (t <= animationLength)
+            {
                 t += Time.deltaTime;
                 player.Visuals.renderer.color = Color.Lerp(color, Color.black, t.Remap(0f, animationLength, 0f, 1f));
                 yield return null;
@@ -51,7 +58,5 @@ namespace Spelunky {
             Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
         }
-
     }
-
 }

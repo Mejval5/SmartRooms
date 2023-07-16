@@ -1,24 +1,27 @@
 using UnityEngine;
 
-namespace Spelunky {
-
+namespace MovementController
+{
     [RequireComponent(typeof(Collider2D))]
-    public class DamageTrigger : MonoBehaviour {
+    public class DamageTrigger : MonoBehaviour
+    {
         public int damage;
 
         private Collider2D _collider;
 
-        private void Awake() {
+        private void Awake()
+        {
             _collider = GetComponent<Collider2D>();
         }
 
-        private void OnTriggerEnter2D(Collider2D other) {
+        private void OnTriggerEnter2D(Collider2D other)
+        {
             EntityHealth health = other.GetComponent<EntityHealth>();
 
-            if (health != null) {
+            if (health != null)
+            {
                 health.TakeDamage(damage);
             }
         }
     }
-
 }

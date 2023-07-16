@@ -1,18 +1,17 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Spelunky {
-
-    public class Player : Entity {
-
+namespace MovementController
+{
+    public class Player : Entity
+    {
         public PlayerInput Input { get; private set; }
         public PlayerAudio Audio { get; private set; }
         public PlayerInventory Inventory { get; private set; }
 
         public Collider2D whipCollider;
 
-        [Header("States")]
-        public GroundedState groundedState;
+        [Header("States")] public GroundedState groundedState;
         public InAirState inAirState;
         public HangingState hangingState;
         public ClimbingState climbingState;
@@ -20,13 +19,11 @@ namespace Spelunky {
         public EnterDoorState enterDoorState;
         public SplatState splatState;
 
-        [Header("Crap")]
-        public LayerMask edgeGrabLayerMask;
+        [Header("Crap")] public LayerMask edgeGrabLayerMask;
         public CameraFollow cam;
         public Exit _exitDoor;
 
-        [Header("Movement")]
-        public float maxJumpHeight;
+        [Header("Movement")] public float maxJumpHeight;
         public float minJumpHeight;
         public float timeToJumpApex;
         public float accelerationTime;
@@ -47,7 +44,9 @@ namespace Spelunky {
 
         private float _gravity;
         [HideInInspector] public float _maxJumpVelocity;
+
         [HideInInspector] public float _minJumpVelocity;
+
         // TODO: Make this private. Currently the jump logic in State.cs is the only place we set this, but I'm not
         // entirely sure how to refactor that so that.
         [HideInInspector] public Vector2 velocity;
@@ -61,9 +60,10 @@ namespace Spelunky {
         [HideInInspector] public float _lookTimer;
         [HideInInspector] public float _timeBeforeLook = 1f;
 
-        public StateMachine stateMachine = new StateMachine();
+        public StateMachine stateMachine = new();
 
-        public override void Awake() {
+        public override void Awake()
+        {
             base.Awake();
 
             UpdatePhysics();
@@ -82,16 +82,18 @@ namespace Spelunky {
             _minJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(_gravity) * minJumpHeight);
         }
 
-        private void Start() {
+        private void Start()
+        {
             stateMachine.AttemptToChangeState(groundedState);
         }
 
-        private void Update() {
+        private void Update()
+        {
             if (stateMachine.CurrentState == null)
             {
                 return;
             }
-            
+
             UpdatePhysics();
             stateMachine.CurrentState.UpdateState();
 
@@ -102,9 +104,11 @@ namespace Spelunky {
             // a ladder again. Can probably be solved cleaner. Without this at
             // the moment we would be unable to jump up or down ladders if we
             // were holding up or down at the same time.
-            if (recentlyJumped) {
+            if (recentlyJumped)
+            {
                 _lastJumpTimer += Time.deltaTime;
-                if (_lastJumpTimer > 0.35f) {
+                if (_lastJumpTimer > 0.35f)
+                {
                     _lastJumpTimer = 0;
                     recentlyJumped = false;
                 }
@@ -115,21 +119,27 @@ namespace Spelunky {
             stateMachine.CurrentState.ChangePlayerVelocityAfterMove(ref velocity);
         }
 
-        private void SetPlayerSpeed() {
-            if (directionalInput.x != 0) {
-                if (directionalInput.y < 0) {
+        private void SetPlayerSpeed()
+        {
+            if (directionalInput.x != 0)
+            {
+                if (directionalInput.y < 0)
+                {
                     _speed = crawlSpeed;
                 }
-                else if (sprinting) {
+                else if (sprinting)
+                {
                     _speed = sprintSpeed;
                 }
-                else {
+                else
+                {
                     _speed = runSpeed;
                 }
             }
         }
 
-        private void CalculateVelocity() {
+        private void CalculateVelocity()
+        {
             float targetVelocityX = directionalInput.x * _speed;
             // TODO: This means we have a horizontal velocity for many seconds after letting go of the input. This tiny
             // velocity apparently can cause us to get dragged after enemies. It's of course the collision detection
@@ -145,8 +155,10 @@ namespace Spelunky {
             stateMachine.CurrentState.ChangePlayerVelocity(ref velocity);
         }
 
-        public void Use() {
-            if (_exitDoor == null) {
+        public void Use()
+        {
+            if (_exitDoor == null)
+            {
                 return;
             }
 
@@ -155,15 +167,18 @@ namespace Spelunky {
 
         private bool _isAttacking;
 
-        public void Attack() {
-            if (_isAttacking) {
+        public void Attack()
+        {
+            if (_isAttacking)
+            {
                 return;
             }
 
             StartCoroutine(DoAttack());
         }
 
-        private IEnumerator DoAttack() {
+        private IEnumerator DoAttack()
+        {
             _isAttacking = true;
             whipCollider.enabled = true;
 
@@ -176,20 +191,25 @@ namespace Spelunky {
             whipCollider.enabled = false;
         }
 
-        public void EnteredDoorway(Exit door) {
+        public void EnteredDoorway(Exit door)
+        {
             _exitDoor = door;
         }
 
-        public void ExitedDoorway(Exit door) {
+        public void ExitedDoorway(Exit door)
+        {
             _exitDoor = null;
         }
 
-        public void Splat() {
+        public void Splat()
+        {
             stateMachine.AttemptToChangeState(splatState);
         }
 
-        private void OnHealthChanged() {
-            if (Health.CurrentHealth <= 0) {
+        private void OnHealthChanged()
+        {
+            if (Health.CurrentHealth <= 0)
+            {
                 stateMachine.AttemptToChangeState(splatState);
             }
         }
@@ -217,5 +237,4 @@ namespace Spelunky {
             // }
         }
     }
-
 }

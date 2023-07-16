@@ -1,7 +1,7 @@
 using UnityEngine;
 
-namespace Spelunky {
-
+namespace MovementController
+{
     /// <summary>
     /// Our custom "Rigidbody2D" class.
     ///
@@ -10,15 +10,16 @@ namespace Spelunky {
     /// just ridiculous not to use the built-in Rigidbody2D for anything?
     /// </summary>
     [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
-    public class EntityPhysics : MonoBehaviour {
-
-        public CollisionInfoEvent OnCollisionEnterEvent { get; private set; } = new CollisionInfoEvent();
-        public CollisionInfoEvent OnCollisionExitEvent { get; private set; } = new CollisionInfoEvent();
+    public class EntityPhysics : MonoBehaviour
+    {
+        public CollisionInfoEvent OnCollisionEnterEvent { get; private set; } = new();
+        public CollisionInfoEvent OnCollisionExitEvent { get; private set; } = new();
 
         // TODO: I really want to get rid of all this raycast nonsense and just use Collider.Cast or Physics2D.Boxcast
         // instead, but they don't return precise collisions so I would have to find a workaround for that.
         // Ref. https://forum.unity.com/threads/spelunky-clone-open-source-2d-platformer.935966/#post-6172939
-        private struct RaycastOrigins {
+        private struct RaycastOrigins
+        {
             public Vector2 topLeft;
             public Vector2 bottomLeft;
             public Vector2 bottomRight;
@@ -45,12 +46,13 @@ namespace Spelunky {
         private const int MaxCollisions = 32;
         private static RaycastHit2D[] _raycastHits = new RaycastHit2D[MaxCollisions];
 
-        private void Reset() {
+        private void Reset()
+        {
             // First time I've tried setting up layermasks in code.
             // TODO: This will break if the layers change, but maybe the layers assigned in the inspector also break
             // then? Either way I will want more control over layers at some point. Like some layer manager which knows
             // all obstacle layers, all entity layers etc. etc.
-            collisionMask = 1<<8 | 1<<12 | 1<<13 | 1<<15;
+            collisionMask = (1 << 8) | (1 << 12) | (1 << 13) | (1 << 15);
             skinWidth = 0.4f;
             horizontalRayCount = 2;
             verticalRayCount = 2;
@@ -59,11 +61,13 @@ namespace Spelunky {
             ValidateData();
         }
 
-        private void OnValidate() {
+        private void OnValidate()
+        {
             ValidateData();
         }
 
-        private void ValidateData() {
+        private void ValidateData()
+        {
             // Even though we're doing the full collision detection and handling ourselves a rigidbody is required for
             // Unity to even allow colliders to detect triggers and we use triggers for various things. So we add a
             // rigidbody, but we make sure it's impossible to actually interact with it.
@@ -77,13 +81,15 @@ namespace Spelunky {
 #endif
         }
 
-        private void Awake() {
+        private void Awake()
+        {
             // TODO: Do the same for the collider as for the rigidbody above? We just need to expose the variables we
             // need to be able to change like size, offset, bounds etc.
             Collider = GetComponent<BoxCollider2D>();
         }
 
-        private void Start() {
+        private void Start()
+        {
             CalculateRaySpacing();
         }
 
@@ -96,7 +102,8 @@ namespace Spelunky {
         /// understand how to properly interpolate the movement.
         /// </summary>
         /// <param name="moveDelta"></param>
-        public void Move(Vector2 moveDelta) {
+        public void Move(Vector2 moveDelta)
+        {
             collisionInfoLastFrame = collisionInfo;
 
             UpdateRaycastOrigins();
@@ -104,7 +111,8 @@ namespace Spelunky {
             collisionInfo.Reset();
 
             // We don't need to check horizontal collisions if there are no horizontal movement.
-            if (moveDelta.x != 0) {
+            if (moveDelta.x != 0)
+            {
                 HorizontalCollisions(ref moveDelta.x);
             }
 
@@ -117,17 +125,20 @@ namespace Spelunky {
             Velocity = moveDelta / Time.deltaTime;
 
             // Set our becameGrounded state based on the previous and current collision state.
-            if (!collisionInfoLastFrame.down && collisionInfo.down) {
+            if (!collisionInfoLastFrame.down && collisionInfo.down)
+            {
                 collisionInfo.becameGroundedThisFrame = true;
             }
 
-            if ((!collisionInfoLastFrame.left && collisionInfo.left) || (!collisionInfoLastFrame.right && collisionInfo.right) || (!collisionInfoLastFrame.down && collisionInfo.down) || (!collisionInfoLastFrame.up && collisionInfo.up)) {
+            if ((!collisionInfoLastFrame.left && collisionInfo.left) || (!collisionInfoLastFrame.right && collisionInfo.right) || (!collisionInfoLastFrame.down && collisionInfo.down) || (!collisionInfoLastFrame.up && collisionInfo.up))
+            {
                 OnCollisionEnterEvent?.Invoke(collisionInfo);
             }
 
             // TODO: If the collider is destroyed last frame this will cause an exception if someone tries to access it
             // in this event. Figure out how to handle that.
-            if ((collisionInfoLastFrame.left && !collisionInfo.left) || (collisionInfoLastFrame.right && !collisionInfo.right) || (collisionInfoLastFrame.down && !collisionInfo.down) || (collisionInfoLastFrame.up && !collisionInfo.up)) {
+            if ((collisionInfoLastFrame.left && !collisionInfo.left) || (collisionInfoLastFrame.right && !collisionInfo.right) || (collisionInfoLastFrame.down && !collisionInfo.down) || (collisionInfoLastFrame.up && !collisionInfo.up))
+            {
                 OnCollisionExitEvent?.Invoke(collisionInfoLastFrame);
             }
         }
@@ -136,17 +147,21 @@ namespace Spelunky {
         /// Check for and resolve any horizontal collisions for this move.
         /// </summary>
         /// <param name="moveDeltaX">The horizontal translation to check for collisions.</param>
-        private void HorizontalCollisions(ref float moveDeltaX) {
+        private void HorizontalCollisions(ref float moveDeltaX)
+        {
             float directionX = Mathf.Sign(moveDeltaX);
             float rayLength = Mathf.Abs(moveDeltaX) + skinWidth;
 
-            if (Mathf.Abs(moveDeltaX) < skinWidth) {
+            if (Mathf.Abs(moveDeltaX) < skinWidth)
+            {
                 rayLength = 2 * skinWidth;
             }
 
             bool resolvedCollision = false;
-            for (int i = 0; i < horizontalRayCount; i++) {
-                if (resolvedCollision) {
+            for (int i = 0; i < horizontalRayCount; i++)
+            {
+                if (resolvedCollision)
+                {
                     break;
                 }
 
@@ -155,10 +170,13 @@ namespace Spelunky {
                 int hits = Physics2D.RaycastNonAlloc(rayOrigin, Vector2.right * directionX, _raycastHits, rayLength, collisionMask);
                 Debug.DrawRay(rayOrigin, Vector2.right * directionX, Color.red);
 
-                for (int j = 0; j < hits; j++) {
+                for (int j = 0; j < hits; j++)
+                {
                     RaycastHit2D hit = _raycastHits[j];
-                    if (hit) {
-                        if (IgnoreCollider(hit.collider, directionX, "horizontal")) {
+                    if (hit)
+                    {
+                        if (IgnoreCollider(hit.collider, directionX, "horizontal"))
+                        {
                             continue;
                         }
 
@@ -185,19 +203,23 @@ namespace Spelunky {
         /// If we're not actually moving we still check to see if we're grounded without resolving any collisions.
         /// </summary>
         /// <param name="moveDeltaY">The vertical translation to check for collisions.</param>
-        private void VerticalCollisions(ref float moveDeltaY) {
-            bool justCheckForGround =moveDeltaY == 0;
+        private void VerticalCollisions(ref float moveDeltaY)
+        {
+            bool justCheckForGround = moveDeltaY == 0;
 
             float directionY = justCheckForGround ? -1 : Mathf.Sign(moveDeltaY);
             float rayLength = Mathf.Abs(moveDeltaY) + skinWidth;
 
-            if (Mathf.Abs(moveDeltaY) < skinWidth) {
+            if (Mathf.Abs(moveDeltaY) < skinWidth)
+            {
                 rayLength = 2 * skinWidth;
             }
 
             bool resolvedCollision = false;
-            for (int i = 0; i < verticalRayCount; i++) {
-                if (resolvedCollision) {
+            for (int i = 0; i < verticalRayCount; i++)
+            {
+                if (resolvedCollision)
+                {
                     break;
                 }
 
@@ -206,10 +228,13 @@ namespace Spelunky {
                 int hits = Physics2D.RaycastNonAlloc(rayOrigin, Vector2.up * directionY, _raycastHits, rayLength, collisionMask);
                 Debug.DrawRay(rayOrigin, Vector2.up * directionY, Color.red);
 
-                for (int j = 0; j < hits; j++) {
+                for (int j = 0; j < hits; j++)
+                {
                     RaycastHit2D hit = _raycastHits[j];
-                    if (hit) {
-                        if (IgnoreCollider(hit.collider, directionY, "vertical")) {
+                    if (hit)
+                    {
+                        if (IgnoreCollider(hit.collider, directionY, "vertical"))
+                        {
                             continue;
                         }
 
@@ -217,7 +242,8 @@ namespace Spelunky {
                         collisionInfo.up = directionY == 1;
                         collisionInfo.colliderVertical = hit.collider;
 
-                        if (!justCheckForGround) {
+                        if (!justCheckForGround)
+                        {
                             moveDeltaY = (hit.distance - skinWidth) * directionY;
                         }
 
@@ -239,32 +265,40 @@ namespace Spelunky {
         /// <param name="direction">A signed value indicating the direction.</param>
         /// <param name="type">Whether we were called from the horizontal or the vertical collision check.</param>
         /// <returns>TRUE if we should ignore the collider, FALSE otherwise.</returns>
-        private bool IgnoreCollider(Collider2D collider, float direction, string type) {
-            if (raycastsHitTriggers == false && collider.isTrigger) {
+        private bool IgnoreCollider(Collider2D collider, float direction, string type)
+        {
+            if (raycastsHitTriggers == false && collider.isTrigger)
+            {
                 return true;
             }
 
             // If the collider we hit is ourself, ignore it.
-            if (collider == Collider) {
+            if (collider == Collider)
+            {
                 return true;
             }
 
             // One way platform handling.
-            if (collider.CompareTag("OneWayPlatform")) {
+            if (collider.CompareTag("OneWayPlatform"))
+            {
                 // Always ignore them if we're colliding horizontally.
-                if (type == "horizontal") {
+                if (type == "horizontal")
+                {
                     return true;
                 }
 
                 // If we're colliding vertically...
-                if (type == "vertical") {
+                if (type == "vertical")
+                {
                     /// ignore them if we're going up...
-                    if (direction == 1) {
+                    if (direction == 1)
+                    {
                         return true;
                     }
 
                     /// or if we're going down and flagged to pass through them.
-                    if (direction == -1 && collisionInfo.fallingThroughPlatform) {
+                    if (direction == -1 && collisionInfo.fallingThroughPlatform)
+                    {
                         return true;
                     }
                 }
@@ -278,7 +312,8 @@ namespace Spelunky {
         ///
         /// Because the bounds are in world space this needs to happen before every collision check.
         /// </summary>
-        private void UpdateRaycastOrigins() {
+        private void UpdateRaycastOrigins()
+        {
             Bounds bounds = CalculateBounds();
             _raycastOrigins.bottomLeft = new Vector2(bounds.min.x, bounds.min.y);
             _raycastOrigins.bottomRight = new Vector2(bounds.max.x, bounds.min.y);
@@ -288,7 +323,8 @@ namespace Spelunky {
         /// <summary>
         /// Calculate the spacing for our raycasts based on our adjusted bounds.
         /// </summary>
-        private void CalculateRaySpacing() {
+        private void CalculateRaySpacing()
+        {
             Bounds bounds = CalculateBounds();
             _horizontalRaySpacing = bounds.size.y / (horizontalRayCount - 1);
             _verticalRaySpacing = bounds.size.x / (verticalRayCount - 1);
@@ -307,12 +343,11 @@ namespace Spelunky {
         /// desirable.
         /// </summary>
         /// <returns></returns>
-        private Bounds CalculateBounds() {
+        private Bounds CalculateBounds()
+        {
             Bounds bounds = Collider.bounds;
             bounds.Expand(skinWidth * -2);
             return bounds;
         }
-
     }
-
 }

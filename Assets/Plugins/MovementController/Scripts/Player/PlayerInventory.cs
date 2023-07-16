@@ -1,17 +1,19 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Spelunky {
-
+namespace MovementController
+{
     [System.Serializable]
-    public class UnityIntEvent : UnityEvent<int> {
+    public class UnityIntEvent : UnityEvent<int>
+    {
     }
 
     [RequireComponent(typeof(Player))]
-    public class PlayerInventory : MonoBehaviour {
-        public UnityEvent BombsChangedEvent { get; private set; } = new UnityEvent();
-        public UnityEvent RopesChangedEvent { get; private set; } = new UnityEvent();
-        public UnityIntEvent GoldAmountChangedEvent { get; private set; } = new UnityIntEvent();
+    public class PlayerInventory : MonoBehaviour
+    {
+        public UnityEvent BombsChangedEvent { get; private set; } = new();
+        public UnityEvent RopesChangedEvent { get; private set; } = new();
+        public UnityIntEvent GoldAmountChangedEvent { get; private set; } = new();
 
         public int numberOfBombs;
         public int numberOfRopes;
@@ -23,13 +25,15 @@ namespace Spelunky {
 
         private Player _player;
 
-        private void Reset() {
+        private void Reset()
+        {
             numberOfBombs = 4;
             numberOfRopes = 4;
             goldAmount = 0;
         }
 
-        private void Start() {
+        private void Start()
+        {
             _player = GetComponent<Player>();
 
             BombsChangedEvent?.Invoke();
@@ -37,30 +41,34 @@ namespace Spelunky {
             GoldAmountChangedEvent?.Invoke(0);
         }
 
-        public void UseBomb() {
+        public void UseBomb()
+        {
             numberOfBombs--;
             BombsChangedEvent?.Invoke();
         }
 
-        public void UseRope() {
+        public void UseRope()
+        {
             numberOfRopes--;
             RopesChangedEvent?.Invoke();
         }
 
-        public void PickupBombs(int amount) {
+        public void PickupBombs(int amount)
+        {
             numberOfBombs += amount;
             BombsChangedEvent?.Invoke();
         }
 
-        public void PickupRopes(int amount) {
+        public void PickupRopes(int amount)
+        {
             numberOfRopes += amount;
             RopesChangedEvent?.Invoke();
         }
 
-        public void PickupGold(int amount) {
+        public void PickupGold(int amount)
+        {
             goldAmount += amount;
             GoldAmountChangedEvent?.Invoke(amount);
         }
     }
-
 }
