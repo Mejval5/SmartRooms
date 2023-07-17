@@ -230,7 +230,7 @@ namespace SmartRooms.Generator
             TryToLogGenerationTime("[SpawnableObjectPatternGenerator] Generate Per Axis took: " + watch.ElapsedMilliseconds + "ms");
             watch.Restart();
 
-            foreach (SpawnableObject spawnableObject in objectPattern.SpawnableObjects)
+            foreach (SpawnableObject spawnableObject in objectPattern.SpawnableObjects.ShuffleList(_random))
             {
                 SpawningCycle(spawnableObject);
             }
@@ -247,7 +247,7 @@ namespace SmartRooms.Generator
 
             GeneratePerlinNoiseOffset();
             float threshold = spawnableObject.SpawnChance;
-            IEnumerable<ValidLocation> validLocations = ListUtils.ShuffleList(ValidLocations, _random);
+            IEnumerable<ValidLocation> validLocations = ValidLocations.ShuffleList(_random);
             foreach (ValidLocation location in validLocations)
             {
                 _flipAxis = location.FlipDir;

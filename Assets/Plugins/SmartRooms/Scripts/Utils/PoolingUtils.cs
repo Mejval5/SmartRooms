@@ -19,7 +19,6 @@ namespace SmartRooms.Utils
         // Invoked when retrieving the next item from the object pool
         public static void OnGetFromPool(GameObject pooledObject)
         {
-            pooledObject.SetActive(true);
         }
 
         // Invoked when we exceed the maximum number of pooled items (i.e. destroy the pooled object)
