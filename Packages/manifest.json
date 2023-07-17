@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "com.popcron.gizmos": "https://github.com/popcron/gizmos.git",
-    "com.twiik.spriteanimator": "https://github.com/oyvind-stromsvik/upm-sprite-animator.git",
     "com.unity.2d.animation": "8.0.5",
     "com.unity.2d.pixel-perfect": "5.0.2",
     "com.unity.2d.psdimporter": "7.0.3",

@@ -1,3 +1,4 @@
+using MovementController.Animations;
 using UnityEngine;
 
 namespace MovementController.Entity

@@ -31,7 +31,10 @@ namespace MovementController.Entity
                 return;
             }
 
-            Instantiate(bloodParticles, transform.position, Quaternion.identity);
+            if (bloodParticles != null)
+            {
+                Instantiate(bloodParticles, transform.position, Quaternion.identity);
+            }
 
             CurrentHealth -= damage;
             if (CurrentHealth < 0)
