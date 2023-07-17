@@ -160,7 +160,9 @@ namespace SmartRooms.Generator
             }
 
             // Initialize the level generation seed.
-            _random = _seed == -1 ? new Random((uint)DateTime.Now.Ticks) : new Random((uint)_seed);
+            uint seed = _seed == -1 ? (uint)DateTime.Now.Ticks : (uint)_seed;
+            _random = new Random(seed);
+            UnityEngine.Random.InitState((int) seed);
 
             // Start the generation in a background thread.
             _generationFinished = false;
