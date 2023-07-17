@@ -41,7 +41,7 @@ namespace SmartRooms.Generator
         [SerializeField] private BackgroundGenerator _backgroundGenerator;
 
         [Header("Additional options")]
-        [SerializeField] private bool _sameTileNeighbor = true;
+        [SerializeField] private bool _sameRoomTileNeighbor = false;
         [SerializeField] [Range(0, 100)] private int _randomStopChance = 25;
         [SerializeField] private int _seed = -1;
 
@@ -51,10 +51,8 @@ namespace SmartRooms.Generator
         [SerializeField] private int _maxAttempts = 10;
         [SerializeField] private bool _tryToFindError;
 
-        [Header("Visualization")]
-
-        [Header("Output")]
-        public LevelLayout finalLevelLayout;
+        [field: Header("Output")]
+        [field: SerializeField] public LevelLayout FinalLevelLayout { get; private set; }
 
         // Usable rooms
         private readonly List<SmartRoom.RoomData> _usableRooms = new();
@@ -132,6 +130,16 @@ namespace SmartRooms.Generator
         }
 #endif
 
+        /// <summary>
+        /// Starts the generation of the level with the given LevelStyle.
+        /// Everything should be setup before calling this method.
+        /// </summary>
+        public void StartGeneration(LevelStyle levelStyle)
+        {
+            _levelStyle = levelStyle;
+            StartGeneration();
+        }
+        
         /// <summary>
         /// Starts the generation of the level.
         /// Everything should be setup before calling this method.
@@ -337,7 +345,7 @@ namespace SmartRooms.Generator
             for (int x = 0; x < _levelStyle.LevelTileSize.x; x++)
             for (int y = 0; y < _levelStyle.LevelTileSize.y; y++)
             {
-                RoomTile tile = finalLevelLayout.roomTiles[x, y] as RoomTile;
+                RoomTile tile = FinalLevelLayout.roomTiles[x, y] as RoomTile;
                 if (tile == null)
                 {
                     continue;
@@ -393,28 +401,28 @@ namespace SmartRooms.Generator
         /// </summary>
         private void UpdateTilemapAndBorder()
         {
-            if (finalLevelLayout.levelLayout == null)
+            if (FinalLevelLayout.levelLayout == null)
             {
                 return;
             }
 
             // Create the bounds of the tilemap.
             const int minX = 0;
-            int maxX = finalLevelLayout.levelSize.x;
+            int maxX = FinalLevelLayout.levelSize.x;
             const int minY = 0;
-            int maxY = finalLevelLayout.levelSize.y;
+            int maxY = FinalLevelLayout.levelSize.y;
             BoundsInt tilemapBounds = new(minX, minY, 0, maxX - minX, maxY - minY, 1);
 
             // Set main tiles
             _tilemap.ClearAllTiles();
-            _tilemap.SetTilesBlock(tilemapBounds, finalLevelLayout.levelLayout);
+            _tilemap.SetTilesBlock(tilemapBounds, FinalLevelLayout.levelLayout);
 
             // Generate border around the map
             _borderGenerator.UpdateSettings(_tilemap, _levelStyle);
             _borderGenerator.GenerateBorder(minX, maxX, minY, maxY);
             
             // Generate the background
-            _backgroundGenerator.GenerateBackground(_levelStyle, finalLevelLayout.levelSize);
+            _backgroundGenerator.GenerateBackground(_levelStyle, FinalLevelLayout.levelSize);
 
             // Compress the tilemap.
             _tilemap.CompressBounds();
@@ -497,7 +505,7 @@ namespace SmartRooms.Generator
          private void InitializeLevelLayout()
          {
              Vector2Int levelSize = _usableRooms[0].structureData.size * _levelStyle.LevelTileSize;
-             finalLevelLayout = new LevelLayout(_levelStyle.LevelTileSize, levelSize);
+             FinalLevelLayout = new LevelLayout(_levelStyle.LevelTileSize, levelSize);
          }
 
          private bool BuildMainPath()
@@ -545,7 +553,7 @@ namespace SmartRooms.Generator
                 }
 
                 // Save the tile to the layout.
-                finalLevelLayout.roomTiles[_mainGeneratedPath.LastOrDefault().x, _mainGeneratedPath.LastOrDefault().y] = newTile;
+                FinalLevelLayout.roomTiles[_mainGeneratedPath.LastOrDefault().x, _mainGeneratedPath.LastOrDefault().y] = newTile;
 
                 // Calculate new direction and position.
                 List<Direction> validDirections = GetValidDirections(newTile, possibleDirections);
@@ -585,7 +593,7 @@ namespace SmartRooms.Generator
         /// <returns></returns>
         private bool GenerateExit(Vector2Int previousTileCoords, Vector2Int exitPosition, Direction lastDirection)
         {
-            RoomTile lastRoomTile = finalLevelLayout.roomTiles[exitPosition.x, exitPosition.y] as RoomTile;
+            RoomTile lastRoomTile = FinalLevelLayout.roomTiles[exitPosition.x, exitPosition.y] as RoomTile;
 
             if (lastRoomTile == null)
             {
@@ -593,7 +601,7 @@ namespace SmartRooms.Generator
                 return false;
             }
 
-            RoomTile tileBeforeEnd = finalLevelLayout.roomTiles[previousTileCoords.x, previousTileCoords.y] as RoomTile;
+            RoomTile tileBeforeEnd = FinalLevelLayout.roomTiles[previousTileCoords.x, previousTileCoords.y] as RoomTile;
 
             if (tileBeforeEnd == null)
             {
@@ -612,18 +620,18 @@ namespace SmartRooms.Generator
             }
 
             lastRoomTile.Type = RoomTile.RoomTileType.EndRoom;
-            finalLevelLayout.roomTiles[exitPosition.x, exitPosition.y] = lastRoomTile;
+            FinalLevelLayout.roomTiles[exitPosition.x, exitPosition.y] = lastRoomTile;
             return true;
         }
 
         private void SpawnSubstructure(int x, int y)
         {
-            GenTile tile = finalLevelLayout.roomTiles[x, y];
+            GenTile tile = FinalLevelLayout.roomTiles[x, y];
 
             bool willHaveSubstructures = _random.NextInt(100) < tile.structureData.substructuresChance;
             if (willHaveSubstructures == false || tile.structureData.substructures.Count == 0)
             {
-                finalLevelLayout.spawnedSubStructureIndex[x, y] = -1;
+                FinalLevelLayout.spawnedSubStructureIndex[x, y] = -1;
                 return;
             }
 
@@ -647,7 +655,7 @@ namespace SmartRooms.Generator
                 }
             }
 
-            finalLevelLayout.spawnedSubStructureIndex[x, y] = substructureIndex;
+            FinalLevelLayout.spawnedSubStructureIndex[x, y] = substructureIndex;
             Structure substructure = tile.structureData.substructures[substructureIndex];
 
             Structure.StructureData substructureData = substructure.GetStructureData();
@@ -668,21 +676,21 @@ namespace SmartRooms.Generator
 
                 xLevel += x * tile.structureData.size.x;
                 yLevel += y * tile.structureData.size.y;
-                int pos = xLevel + yLevel * finalLevelLayout.levelSize.x;
-                finalLevelLayout.levelLayout[pos] = substructureData.layout[i];
+                int pos = xLevel + yLevel * FinalLevelLayout.levelSize.x;
+                FinalLevelLayout.levelLayout[pos] = substructureData.layout[i];
             }
         }
 
         private void WriteGenTileToLayout(int x, int y)
         {
-            GenTile tile = finalLevelLayout.roomTiles[x, y];
+            GenTile tile = FinalLevelLayout.roomTiles[x, y];
             
             for (int i = 0; i < tile.structureData.layout.Length; i++)
             {
                 int xLevel = i % tile.structureData.size.x + x * tile.structureData.size.x;
                 int yLevel = i / tile.structureData.size.x + y * tile.structureData.size.y;
-                int pos = xLevel + yLevel * finalLevelLayout.levelSize.x;
-                finalLevelLayout.levelLayout[pos] = tile.structureData.layout[i];
+                int pos = xLevel + yLevel * FinalLevelLayout.levelSize.x;
+                FinalLevelLayout.levelLayout[pos] = tile.structureData.layout[i];
             }
         }
 
@@ -691,14 +699,14 @@ namespace SmartRooms.Generator
             for (int x = 0; x < _levelStyle.LevelTileSize.x; x++)
             for (int y = 0; y < _levelStyle.LevelTileSize.y; y++)
             {
-                GenTile tile = finalLevelLayout.roomTiles[x, y];
+                GenTile tile = FinalLevelLayout.roomTiles[x, y];
 
                 if (tile == null)
                 {
                     int index = _random.NextInt(_roomTiles.Count);
                     RoomTile randomTile = _roomTiles[index];
                     tile = randomTile;
-                    finalLevelLayout.roomTiles[x, y] = tile;
+                    FinalLevelLayout.roomTiles[x, y] = tile;
                 }
             }
         }
@@ -720,7 +728,7 @@ namespace SmartRooms.Generator
                     int x = coords.x;
                     int y = coords.y;
                     
-                    if (finalLevelLayout.roomTiles[x, y] == null)
+                    if (FinalLevelLayout.roomTiles[x, y] == null)
                     {
                         continue;
                     }
@@ -728,7 +736,7 @@ namespace SmartRooms.Generator
                     Vector2Int startCoords = new (x, y);
                     
                     List<Direction> possibleDirections = GetAvailableSides(startCoords);
-                    GenTile tile = finalLevelLayout.roomTiles[x, y];
+                    GenTile tile = FinalLevelLayout.roomTiles[x, y];
                     
                     (SpecialTile specialTile, Vector2Int tilePos) = GetSpecialTile(tile, possibleDirections, startCoords);
                     if (specialTile == null)
@@ -751,7 +759,7 @@ namespace SmartRooms.Generator
                             continue;
                         }
                         
-                        if (finalLevelLayout.roomTiles[childCoords.x, childCoords.y] != null)
+                        if (FinalLevelLayout.roomTiles[childCoords.x, childCoords.y] != null)
                         {
                             continue;
                         }
@@ -762,15 +770,15 @@ namespace SmartRooms.Generator
                         List<GenTile> childTiles = new() { childTile };
                         ConnectTiles(childTiles);
 
-                        finalLevelLayout.roomTiles[childCoords.x, childCoords.y] = childTile;
+                        FinalLevelLayout.roomTiles[childCoords.x, childCoords.y] = childTile;
                     }
 
-                    finalLevelLayout.roomTiles[tilePos.x, tilePos.y] = specialTile;
-                    finalLevelLayout.spawnedSpecialTiles.Add(specialTile);
+                    FinalLevelLayout.roomTiles[tilePos.x, tilePos.y] = specialTile;
+                    FinalLevelLayout.spawnedSpecialTiles.Add(specialTile);
                 }
             }
 
-            List<string> spawnedSpecialRooms = finalLevelLayout.spawnedSpecialTiles.Select(roomTile => roomTile.SpecialRoomData.structureData.id).ToList();
+            List<string> spawnedSpecialRooms = FinalLevelLayout.spawnedSpecialTiles.Select(roomTile => roomTile.SpecialRoomData.structureData.id).ToList();
             
             return _usableSpecialRooms.TrueForAll(specialRoom => specialRoom.mandatory == false || spawnedSpecialRooms.Any(
                 spawnedRoomID => spawnedRoomID == specialRoom.structureData.id)
@@ -868,7 +876,7 @@ namespace SmartRooms.Generator
                 
                 List<SpecialTile> directionTiles = tile.specialRoomTiles[dir];
                 directionTiles = directionTiles.Where(possibleTile =>
-                     finalLevelLayout.spawnedSpecialTiles.TrueForAll(specialTile => possibleTile.structureData.id != specialTile.SpecialRoomData.structureData.id)
+                     FinalLevelLayout.spawnedSpecialTiles.TrueForAll(specialTile => possibleTile.structureData.id != specialTile.SpecialRoomData.structureData.id)
                      ).ToList();
 
                 if (directionTiles.Count > 0)
@@ -941,7 +949,7 @@ namespace SmartRooms.Generator
                     continue;
                 }
 
-                if (finalLevelLayout.roomTiles[posCheck.x, posCheck.y] != null)
+                if (FinalLevelLayout.roomTiles[posCheck.x, posCheck.y] != null)
                 {
                     continue;
                 }
@@ -995,7 +1003,7 @@ namespace SmartRooms.Generator
                 // Add end tiles to which can be connected for the last tile
                 foreach (TGenTile nextTile in opposingTiles)
                 {
-                    if (_sameTileNeighbor == false && tile.structureData.layout == nextTile.structureData.layout)
+                    if (_sameRoomTileNeighbor == false && tile.structureData.layout == nextTile.structureData.layout)
                     {
                         continue;
                     }
@@ -1312,12 +1320,12 @@ namespace SmartRooms.Generator
                     continue;
                 }
 
-                if (newPos.x < 0 || newPos.x >= finalLevelLayout.levelSize.x || newPos.y < 0 || newPos.y >= finalLevelLayout.levelSize.y)
+                if (newPos.x < 0 || newPos.x >= FinalLevelLayout.levelSize.x || newPos.y < 0 || newPos.y >= FinalLevelLayout.levelSize.y)
                 {
                     continue;
                 }
 
-                TileBase tile = finalLevelLayout.GetTile(newPos.x, newPos.y);
+                TileBase tile = FinalLevelLayout.GetTile(newPos.x, newPos.y);
                 if (tile == null)
                 {
                     newPoints.Add(newPos);
@@ -1347,7 +1355,7 @@ namespace SmartRooms.Generator
             for (int x = 0; x < _levelStyle.LevelTileSize.x; x++)
             for (int y = 0; y < _levelStyle.LevelTileSize.y; y++)
             {
-                GenTile tile = finalLevelLayout.roomTiles[x, y];
+                GenTile tile = FinalLevelLayout.roomTiles[x, y];
                     
                 GameObject tileParent = new GameObject($"Room[{x}, {y}]");
                 tileParent.transform.parent = _roomGameObjectsHolder;
@@ -1377,12 +1385,12 @@ namespace SmartRooms.Generator
                         continue;
                     }
 
-                    if (finalLevelLayout.spawnedSubStructureIndex[x, y] == -1)
+                    if (FinalLevelLayout.spawnedSubStructureIndex[x, y] == -1)
                     {
                         continue;
                     }
 
-                    Structure chosenSubstructure = tile.structureData.substructures[finalLevelLayout.spawnedSubStructureIndex[x, y]];
+                    Structure chosenSubstructure = tile.structureData.substructures[FinalLevelLayout.spawnedSubStructureIndex[x, y]];
                     Structure.StructureData chosenSubstructureData = chosenSubstructure.GetStructureData();
 
                     if (chosenSubstructure.gameObject.Equals(structure.gameObject) == false)
@@ -1448,7 +1456,7 @@ namespace SmartRooms.Generator
             }
             
             Vector2Int lastRoomPosition = _mainGeneratedPath[0];
-            Vector3 roomSize = finalLevelLayout.roomTiles[0, 0].structureData.size.ToVector3();
+            Vector3 roomSize = FinalLevelLayout.roomTiles[0, 0].structureData.size.ToVector3();
             
             for (int i = 1; i < _mainGeneratedPath.Count - 1; i++)
             {
