@@ -13,7 +13,8 @@ namespace MovementController.Player
 
         public Collider2D whipCollider;
 
-        [Header("States")] public GroundedState groundedState;
+        [Header("States")]
+        public GroundedState groundedState;
         public InAirState inAirState;
         public HangingState hangingState;
         public ClimbingState climbingState;
@@ -21,11 +22,13 @@ namespace MovementController.Player
         public EnterDoorState enterDoorState;
         public SplatState splatState;
 
-        [Header("Crap")] public LayerMask edgeGrabLayerMask;
+        [Header("Level setup")]
+        public LayerMask edgeGrabLayerMask;
         public CameraFollow cam;
         public Exit _exitDoor;
 
-        [Header("Movement")] public float maxJumpHeight;
+        [Header("Movement")]
+        public float maxJumpHeight;
         public float minJumpHeight;
         public float timeToJumpApex;
         public float accelerationTime;
