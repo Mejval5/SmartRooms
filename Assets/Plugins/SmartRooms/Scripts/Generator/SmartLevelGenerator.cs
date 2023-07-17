@@ -100,6 +100,7 @@ namespace SmartRooms.Generator
         // Properties
         public Tilemap TargetTilemap => _tilemap;
         public LevelStyle CurrentLevelStyle => _levelStyle;
+        public int Seed => _seed;
 
         /// <summary>
         /// A* path point

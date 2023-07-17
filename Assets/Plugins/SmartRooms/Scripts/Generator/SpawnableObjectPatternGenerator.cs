@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using SmartRooms.Levels;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -9,7 +8,6 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Debug = UnityEngine.Debug;
-using Random = UnityEngine.Random;
 
 namespace SmartRooms.Generator
 {
@@ -17,7 +15,8 @@ namespace SmartRooms.Generator
     public class SpawnableObjectPatternGenerator : MonoBehaviour
     {
         [SerializeField] private SmartLevelGenerator _levelGenerator;
-        
+        [SerializeField] private int _seed = -1;
+
         [SerializeField] private Transform _objectHolder;
         [SerializeField] private Texture2D _perlinTexture;
         [SerializeField] private Vector2 _defaultOffset = new(10, 16);
@@ -38,6 +37,7 @@ namespace SmartRooms.Generator
         private List<ValidLocation> ValidLocations { get; set; } = new();
         
         private bool _generateNextFrame;
+        private Unity.Mathematics.Random _random;
 
         private enum BlockState
         {
@@ -101,14 +101,18 @@ namespace SmartRooms.Generator
 
         private void GenerateWithLevelGenerator()
         {
-            GenerateForMap(_levelGenerator.TargetTilemap, _levelGenerator.CurrentLevelStyle);
+            GenerateForMap(_levelGenerator.TargetTilemap, _levelGenerator.CurrentLevelStyle, _levelGenerator.Seed);
         }
 
-        public void GenerateForMap(Tilemap map, LevelStyle levelStyle)
+        public void GenerateForMap(Tilemap map, LevelStyle levelStyle, int seed = -1)
         {
+            _seed = seed;
             _levelStyle = levelStyle;
             _map = map;
-
+            
+            // Initialize the level generation seed.
+            _random = _seed == -1 ? new Unity.Mathematics.Random((uint)DateTime.Now.Ticks) : new Unity.Mathematics.Random((uint)_seed);
+            
             Generate();
         }
 
@@ -182,10 +186,10 @@ namespace SmartRooms.Generator
 
         private void GenerateByStyle()
         {
-            foreach (ObjectPattern foliagePattern in _levelStyle.SpawnableObjectPatterns)
+            foreach (ObjectPattern objectPattern in _levelStyle.SpawnableObjectPatterns)
             {
-                foliagePattern.Initialize();
-                GenerateByPattern(foliagePattern);
+                objectPattern.Initialize();
+                GenerateByPattern(objectPattern);
             }
         }
 
@@ -201,13 +205,13 @@ namespace SmartRooms.Generator
             if (objectPattern.Pattern.RuleTransform is SpawningPattern.Transform.MirrorX or SpawningPattern.Transform.MirrorXY)
             {
                 randomStartIndexX = 1;
-                xOffset = Random.Range(0, 2);
+                xOffset = _random.NextInt(2);
             }
 
             if (objectPattern.Pattern.RuleTransform is SpawningPattern.Transform.MirrorY or SpawningPattern.Transform.MirrorXY)
             {
                 randomStartIndexY = 1;
-                yOffset = Random.Range(0, 2);
+                yOffset = _random.NextInt(2);
             }
 
             Stopwatch watch = new();
@@ -231,7 +235,7 @@ namespace SmartRooms.Generator
                 SpawningCycle(spawnableObject);
             }
             
-            TryToLogGenerationTime("[SpawnableObjectPatternGenerator] Foliage Spawning Cycle took: " + watch.ElapsedMilliseconds + "ms");
+            TryToLogGenerationTime("[SpawnableObjectPatternGenerator] Object Spawning Cycle took: " + watch.ElapsedMilliseconds + "ms");
         }
 
         protected virtual void SpawningCycle(SpawnableObject spawnableObject)
@@ -243,14 +247,14 @@ namespace SmartRooms.Generator
 
             GeneratePerlinNoiseOffset();
             float threshold = spawnableObject.SpawnChance;
-            IEnumerable<ValidLocation> validLocations = ListUtils.ShuffleList(ValidLocations);
+            IEnumerable<ValidLocation> validLocations = ListUtils.ShuffleList(ValidLocations, _random);
             foreach (ValidLocation location in validLocations)
             {
                 _flipAxis = location.FlipDir;
                 bool perlinValid = ReadPerlinAtPosition(location.Position.x, location.Position.y, threshold);
                 if (perlinValid && _spawnedItems[spawnableObject] < spawnableObject.MaxSpawned * _customDensityOverride)
                 {
-                    bool success = SpawnFoliageAtPosition(location.Position.x, location.Position.y, spawnableObject);
+                    bool success = SpawnObjectAtPosition(location.Position.x, location.Position.y, spawnableObject);
                     if (success)
                     {
                         _spawnedItems[spawnableObject] += 1;
@@ -261,14 +265,14 @@ namespace SmartRooms.Generator
             }
         }
 
-        protected virtual bool SpawnFoliageAtPosition(int x, int y, SpawnableObject spawnableObject)
+        protected virtual bool SpawnObjectAtPosition(int x, int y, SpawnableObject spawnableObject)
         {
             if (spawnableObject.DontSpawnOnEdge && (x < 0 || x > _map.size.x - 1 || y < 0 || y > _map.size.y - 1))
             {
                 return false;
             }
 
-            float rand = Random.Range(0f, 100f);
+            float rand = _random.NextFloat(100f);
             if (rand < spawnableObject.FailChance)
             {
                 return false;
@@ -303,12 +307,12 @@ namespace SmartRooms.Generator
             return true;
         }
 
-        private Vector2 OffsetSpawnPos(Vector2 spawnPos, SpawnableObject foliage)
+        private Vector2 OffsetSpawnPos(Vector2 spawnPos, SpawnableObject spawnableObject)
         {
-            float xOff = Random.Range(foliage.RandomOffsetRangeX.x, foliage.RandomOffsetRangeX.y);
-            float yOff = Random.Range(foliage.RandomOffsetRangeY.x, foliage.RandomOffsetRangeY.y);
-            xOff += foliage.PositionOffset.x * _flipAxis.x;
-            yOff += foliage.PositionOffset.y * _flipAxis.y;
+            float xOff = _random.NextFloat(spawnableObject.RandomOffsetRangeX.x, spawnableObject.RandomOffsetRangeX.y);
+            float yOff = _random.NextFloat(spawnableObject.RandomOffsetRangeY.x, spawnableObject.RandomOffsetRangeY.y);
+            xOff += spawnableObject.PositionOffset.x * _flipAxis.x;
+            yOff += spawnableObject.PositionOffset.y * _flipAxis.y;
             return spawnPos + new Vector2(xOff, yOff);
         }
 
@@ -415,7 +419,7 @@ namespace SmartRooms.Generator
 
         private void GeneratePerlinNoiseOffset()
         {
-            _perlinNoiseOffset = new Vector2Int(Random.Range(0, _perlinTexture.width), Random.Range(0, _perlinTexture.height));
+            _perlinNoiseOffset = new Vector2Int(_random.NextInt(_perlinTexture.width), _random.NextInt(_perlinTexture.height));
         }
 
         private bool ReadPerlinAtPosition(int x, int y, float threshold)
