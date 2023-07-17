@@ -1604,7 +1604,7 @@ namespace SmartRooms.Generator
         
         private void HandleGenerationOrderButton()
         {
-            if (GUILayout.Button("Show generation order") == false)
+            if (GUILayout.Button("Show main path") == false)
             {
                 return;
             }

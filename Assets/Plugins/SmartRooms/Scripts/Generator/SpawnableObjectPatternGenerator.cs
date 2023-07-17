@@ -234,7 +234,7 @@ namespace SmartRooms.Generator
             TryToLogGenerationTime("[SpawnableObjectPatternGenerator] Foliage Spawning Cycle took: " + watch.ElapsedMilliseconds + "ms");
         }
 
-        public virtual void SpawningCycle(SpawnableObject spawnableObject)
+        protected virtual void SpawningCycle(SpawnableObject spawnableObject)
         {
             if (!_spawnedItems.ContainsKey(spawnableObject))
             {
@@ -261,7 +261,7 @@ namespace SmartRooms.Generator
             }
         }
 
-        public virtual bool SpawnFoliageAtPosition(int x, int y, SpawnableObject spawnableObject)
+        protected virtual bool SpawnFoliageAtPosition(int x, int y, SpawnableObject spawnableObject)
         {
             if (spawnableObject.DontSpawnOnEdge && (x < 0 || x > _map.size.x - 1 || y < 0 || y > _map.size.y - 1))
             {
@@ -303,7 +303,7 @@ namespace SmartRooms.Generator
             return true;
         }
 
-        public Vector2 OffsetSpawnPos(Vector2 spawnPos, SpawnableObject foliage)
+        private Vector2 OffsetSpawnPos(Vector2 spawnPos, SpawnableObject foliage)
         {
             float xOff = Random.Range(foliage.RandomOffsetRangeX.x, foliage.RandomOffsetRangeX.y);
             float yOff = Random.Range(foliage.RandomOffsetRangeY.x, foliage.RandomOffsetRangeY.y);
@@ -312,7 +312,7 @@ namespace SmartRooms.Generator
             return spawnPos + new Vector2(xOff, yOff);
         }
 
-        public Vector2 MapCoordsToSpace(int x, int y)
+        private Vector2 MapCoordsToSpace(int x, int y)
         {
             float _x = x + _defaultOffset.x;
             float _y = y + _defaultOffset.y;
