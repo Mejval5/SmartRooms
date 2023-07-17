@@ -38,7 +38,7 @@ namespace SmartRooms.Generator
         [SerializeField] private Transform _start;
         [SerializeField] private Transform _exit;
         [SerializeField] private BorderGenerator _borderGenerator;
-        [SerializeField] private List<BackgroundGenerator> _backgroundGenerators;
+        [SerializeField] private BackgroundGenerator _backgroundGenerator;
 
         [Header("Additional options")]
         [SerializeField] private bool _sameTileNeighbor = true;
@@ -414,10 +414,7 @@ namespace SmartRooms.Generator
             _borderGenerator.GenerateBorder(minX, maxX, minY, maxY);
             
             // Generate the background
-            foreach (BackgroundGenerator backgroundGenerator in _backgroundGenerators)
-            {
-                backgroundGenerator.GenerateBackground(_levelStyle, finalLevelLayout.levelSize);
-            }
+            _backgroundGenerator.GenerateBackground(_levelStyle, finalLevelLayout.levelSize);
 
             // Compress the tilemap.
             _tilemap.CompressBounds();
