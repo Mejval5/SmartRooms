@@ -38,4 +38,4 @@ MonoBehaviour:
   _showSpriteAtRuntime: 0
   _firstGameObjectChance: 25
   _secondGameObject: {fileID: 0}
-  _previousPath: Assets/Plugins/SmartRooms/TileSets/RuleTiles/Tiles/QuantumEyeTile.asset
+  _previousPath: Assets/Plugins/SmartRooms/TileSets/Tiles/QuantumEyeTile.asset

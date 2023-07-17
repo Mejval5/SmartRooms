@@ -38,4 +38,4 @@ MonoBehaviour:
   _showSpriteAtRuntime: 0
   _firstGameObjectChance: 50
   _secondGameObject: {fileID: 0}
-  _previousPath: Assets/Plugins/SmartRooms/TileSets/RuleTiles/Tiles/QuantumGoldAndGreenTile.asset
+  _previousPath: Assets/Plugins/SmartRooms/TileSets/Tiles/QuantumGoldAndGreenTile.asset
