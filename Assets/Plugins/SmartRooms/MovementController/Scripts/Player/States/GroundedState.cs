@@ -61,12 +61,15 @@ namespace MovementController.Player.States
                 player.stateMachine.AttemptToChangeState(player.inAirState);
                 return;
             }
-
+            
             if (player.directionalInput.y > 0)
             {
                 player.stateMachine.AttemptToChangeState(player.climbingState);
             }
-            else if (player.directionalInput.y < 0 && player.Physics.collisionInfo.down && player.Physics.collisionInfo.colliderVertical.CompareTag("OneWayPlatform"))
+            else if (player.directionalInput.y < 0 
+                     && player.Physics.collisionInfo.down 
+                     && player.Physics.collisionInfo.colliderVertical != null
+                     && player.Physics.collisionInfo.colliderVertical.CompareTag("OneWayPlatform"))
             {
                 player.stateMachine.AttemptToChangeState(player.climbingState);
             }
@@ -141,8 +144,7 @@ namespace MovementController.Player.States
 
                 if (player._lookTimer > player._timeBeforeLook)
                 {
-                    float offset = Mathf.Lerp(0, 64f * Mathf.Sign(player.directionalInput.y), Time.deltaTime * 128);
-                    player.cam.SetVerticalOffset(offset);
+                    player.cam.SetVerticalOffset(Mathf.Sign(player.directionalInput.y));
                 }
             }
             else
@@ -157,7 +159,7 @@ namespace MovementController.Player.States
             RaycastHit2D hitCenter = Physics2D.Raycast(player.transform.position + Vector3.up, Vector2.down, 2, player.Physics.collisionMask);
             Debug.DrawRay(player.transform.position + Vector3.up, Vector2.down * 2, Color.magenta);
 
-            Vector3 offsetForward = new(player.Physics.Collider.size.x * player.Visuals.facingDirection / 2f, 1, 0);
+            Vector3 offsetForward = new(player.Physics.Collider.bounds.size.x * player.Visuals.facingDirection / 2f, 1, 0);
             RaycastHit2D hitForward = Physics2D.Raycast(player.transform.position + offsetForward, Vector2.down, 2, player.Physics.collisionMask);
             Debug.DrawRay(player.transform.position + offsetForward, Vector2.down * 2, Color.green);
 

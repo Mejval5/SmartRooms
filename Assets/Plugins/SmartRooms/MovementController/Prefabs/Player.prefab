@@ -175,7 +175,7 @@ Transform:
   - {fileID: 782368877}
   - {fileID: 8558270721840197621}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &441570235812081202
 Rigidbody2D:
@@ -194,6 +194,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -208,6 +214,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -233,7 +258,7 @@ AudioSource:
   m_GameObject: {fileID: 1611851042852994}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 99a019a9200e56241971455f837c2bb8, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -380,11 +405,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionMask:
     serializedVersion: 2
-    m_Bits: 179968
+    m_Bits: 180032
   skinWidth: 0.1
   horizontalRayCount: 3
   verticalRayCount: 3
-  raycastsHitTriggers: 0
+  raycastsHitTriggers: 1
 --- !u!114 &8124188979697528624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,6 +437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFacingRight: 0
   facingDirection: -1
+  _directionalTransform: {fileID: 8558270721840197621}
   renderer: {fileID: 782368879}
   animator: {fileID: 782368878}
 --- !u!114 &-1833860461211926048
@@ -595,9 +621,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloodParticles: {fileID: 0}
   maxHealth: 4
+  <CurrentHealth>k__BackingField: 0
   spriteRenderer: {fileID: 782368879}
-  invulnerabilityDuration: 1
-  numberOfInvulnerabilityFlashes: 10
+  invulnerabilityDuration: 2
+  numberOfInvulnerabilityFlashes: 4
   invulnerabilityFlashColor: {r: 1, g: 1, b: 1, a: 0.5019608}
   isInvulnerable: 0
 --- !u!1 &390950007307755326
@@ -643,10 +670,29 @@ BoxCollider2D:
   m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3, y: 10}
+  m_Offset: {x: -0.44170558, y: 0.5620136}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -657,7 +703,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 42, y: 20}
+  m_Size: {x: 0.59591126, y: 0.4359398}
   m_EdgeRadius: 0
 --- !u!114 &7559943637196607543
 MonoBehaviour:

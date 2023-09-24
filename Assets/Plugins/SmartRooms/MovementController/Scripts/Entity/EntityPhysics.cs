@@ -26,7 +26,7 @@ namespace MovementController.Entity
             public Vector2 bottomRight;
         }
 
-        public BoxCollider2D Collider { get; private set; }
+        public Collider2D Collider { get; private set; }
         public Vector2 Velocity { get; private set; }
 
         public CollisionInfo collisionInfo;
@@ -86,7 +86,7 @@ namespace MovementController.Entity
         {
             // TODO: Do the same for the collider as for the rigidbody above? We just need to expose the variables we
             // need to be able to change like size, offset, bounds etc.
-            Collider = GetComponent<BoxCollider2D>();
+            Collider = GetComponent<Collider2D>();
         }
 
         private void Start()
@@ -185,7 +185,10 @@ namespace MovementController.Entity
                         collisionInfo.right = directionX == 1;
                         collisionInfo.colliderHorizontal = hit.collider;
 
-                        moveDeltaX = (hit.distance - skinWidth) * directionX;
+                        if (hit.collider.isTrigger == false)
+                        {
+                            moveDeltaX = (hit.distance - skinWidth) * directionX;
+                        }
 
                         // In Sebastian Lague's original tutorial I think he supports slopes so he has to go through all
                         // the hits because they could be different lengths due to us being on a slope. We don't support
@@ -243,7 +246,7 @@ namespace MovementController.Entity
                         collisionInfo.up = directionY == 1;
                         collisionInfo.colliderVertical = hit.collider;
 
-                        if (!justCheckForGround)
+                        if (!justCheckForGround && hit.collider.isTrigger == false)
                         {
                             moveDeltaY = (hit.distance - skinWidth) * directionY;
                         }

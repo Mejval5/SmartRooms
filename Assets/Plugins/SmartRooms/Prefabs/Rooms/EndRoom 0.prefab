@@ -1149,6 +1149,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b2376460a6bef0d41a7d9b64935738ce, type: 2}
   - {fileID: 11400000, guid: b2376460a6bef0d41a7d9b64935738ce, type: 2}
   _substructures: []
+  _tilemap: {fileID: 0}
+  _cachedGameObject: {fileID: 1193538006816164252}
+  _cachedName: EndRoom 0
+  _cachedId: -566584
 --- !u!114 &9005690575571127960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1174,9 +1178,65 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 4075494394318224482}
     m_Modifications:
+    - target: {fileID: 1031283457530461969, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9338843
+      objectReference: {fileID: 0}
+    - target: {fileID: 1031283457530461969, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2975206
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663435357879228888, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.9338843
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663435357879228888, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.2975206
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954121259897682970, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9338843
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954121259897682970, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2975206
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954121259945462739, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9338843
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954121259945462739, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2975206
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577347737766276378, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.9338843
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577347737766276378, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.2975206
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577347737944906451, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.9338843
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577347737944906451, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.2975206
+      objectReference: {fileID: 0}
+    - target: {fileID: 3760899518571684126, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4685714
+      objectReference: {fileID: 0}
+    - target: {fileID: 3760899518571684126, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_Size.y
+      value: 0.85714287
+      objectReference: {fileID: 0}
     - target: {fileID: 3864982592607261325, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
       propertyPath: m_Name
       value: LadderWithPlatform
@@ -1225,8 +1285,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4065848790196595366, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9338843
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065848790196595366, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2975206
+      objectReference: {fileID: 0}
+    - target: {fileID: 5637999786261514554, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.4685714
+      objectReference: {fileID: 0}
+    - target: {fileID: 5637999786261514554, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.85714287
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926440734154546504, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.9338843
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926440734154546504, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.2975206
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aff48dfc98d05d449629e0da30ef528, type: 3}
 --- !u!4 &8675623767529334490 stripped
 Transform:
@@ -1238,9 +1324,17 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 4075494394318224482}
     m_Modifications:
+    - target: {fileID: 290033442004920382, guid: 9551837729b755f4aabc24d5b0b3bfb1, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.9338843
+      objectReference: {fileID: 0}
+    - target: {fileID: 290033442004920382, guid: 9551837729b755f4aabc24d5b0b3bfb1, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.2975206
+      objectReference: {fileID: 0}
     - target: {fileID: 1943366862528149497, guid: 9551837729b755f4aabc24d5b0b3bfb1, type: 3}
       propertyPath: m_Name
       value: Ladder
@@ -1289,8 +1383,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2115575351375449847, guid: 9551837729b755f4aabc24d5b0b3bfb1, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9338843
+      objectReference: {fileID: 0}
+    - target: {fileID: 2115575351375449847, guid: 9551837729b755f4aabc24d5b0b3bfb1, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2975206
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9551837729b755f4aabc24d5b0b3bfb1, type: 3}
 --- !u!4 &7119012870689343419 stripped
 Transform:

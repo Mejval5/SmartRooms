@@ -1,6 +1,9 @@
+using MovementController.Collision;
+using MovementController.Entity;
 using System.Collections;
 using MovementController.Level;
 using MovementController.Player.States;
+using System;
 using UnityEngine;
 
 namespace MovementController.Player
@@ -63,7 +66,7 @@ namespace MovementController.Player
         [HideInInspector] public float _lastJumpTimer;
 
         [HideInInspector] public float _lookTimer;
-        [HideInInspector] public float _timeBeforeLook = 1f;
+        [HideInInspector] public float _timeBeforeLook = 0.5f;
 
         public StateMachine stateMachine = new();
 

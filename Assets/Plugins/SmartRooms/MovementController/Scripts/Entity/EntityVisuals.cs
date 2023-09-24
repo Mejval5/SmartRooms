@@ -7,6 +7,7 @@ namespace MovementController.Entity
     {
         public bool isFacingRight = false;
         public float facingDirection = -1;
+        [SerializeField] private Transform _directionalTransform;
 
         // References.
         [HideInInspector] public new SpriteRenderer renderer;
@@ -34,6 +35,10 @@ namespace MovementController.Entity
             renderer.flipX = !renderer.flipX;
             facingDirection *= -1;
             isFacingRight = !isFacingRight;
+            if (_directionalTransform != null)
+            {
+                _directionalTransform.localScale = Vector3.Scale(_directionalTransform.localScale, new Vector3(-1, 1, 1));
+            }
         }
     }
 }

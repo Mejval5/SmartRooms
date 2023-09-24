@@ -75,8 +75,7 @@ namespace MovementController.Player.States
 
                 if (player._lookTimer > player._timeBeforeLook)
                 {
-                    float offset = Mathf.Lerp(0, 4f * Mathf.Sign(player.directionalInput.y), Time.deltaTime * 128);
-                    player.cam.SetVerticalOffset(offset);
+                    player.cam.SetVerticalOffset(Mathf.Sign(player.directionalInput.y));
                 }
             }
             else

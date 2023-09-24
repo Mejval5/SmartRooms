@@ -11,7 +11,7 @@ namespace MovementController.Entity
         public UnityEvent HealthChangedEvent { get; private set; } = new();
 
         public int maxHealth;
-        public int CurrentHealth { get; private set; }
+        [field: SerializeField] public int CurrentHealth { get; private set; }
 
         [Header("Invulnerability")] public SpriteRenderer spriteRenderer;
         public float invulnerabilityDuration;

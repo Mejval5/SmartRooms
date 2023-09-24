@@ -1171,7 +1171,7 @@ MonoBehaviour:
   _tilemap: {fileID: 6643889835342640323}
   _cachedGameObject: {fileID: 1193538006816164252}
   _cachedName: BiggerRoom
-  _cachedId: -13426
+  _cachedId: -6705948
 --- !u!114 &-6398231229833641348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1192,7 +1192,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 4075494394318224482}
     m_Modifications:
     - target: {fileID: 1193538006816164252, guid: b3701f75af07cad4aac66dd94ffe7978, type: 3}
@@ -1205,7 +1205,7 @@ PrefabInstance:
       objectReference: {fileID: 6580944353543297143}
     - target: {fileID: 2788211170888892043, guid: b3701f75af07cad4aac66dd94ffe7978, type: 3}
       propertyPath: _cachedId
-      value: -13476
+      value: -6705998
       objectReference: {fileID: 0}
     - target: {fileID: 4075494394318224482, guid: b3701f75af07cad4aac66dd94ffe7978, type: 3}
       propertyPath: m_RootOrder
@@ -1288,7 +1288,9 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3701f75af07cad4aac66dd94ffe7978, type: 3}
 --- !u!114 &2438232827493945919 stripped
 MonoBehaviour:
@@ -1316,7 +1318,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 4075494394318224482}
     m_Modifications:
     - target: {fileID: 1193538006816164252, guid: a94dea23cd49f924699ab4300a8da259, type: 3}
@@ -1325,7 +1327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2788211170888892043, guid: a94dea23cd49f924699ab4300a8da259, type: 3}
       propertyPath: _cachedId
-      value: -13440
+      value: -6705962
       objectReference: {fileID: 0}
     - target: {fileID: 4075494394318224482, guid: a94dea23cd49f924699ab4300a8da259, type: 3}
       propertyPath: m_RootOrder
@@ -1429,7 +1431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6643889835342640323, guid: a94dea23cd49f924699ab4300a8da259, type: 3}
       propertyPath: m_TileObjectToInstantiateArray.Array.data[1].m_RefCount
-      value: 30
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6643889835342640323, guid: a94dea23cd49f924699ab4300a8da259, type: 3}
       propertyPath: m_TileObjectToInstantiateArray.Array.data[2].m_RefCount
@@ -1441,11 +1443,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6643889835342640323, guid: a94dea23cd49f924699ab4300a8da259, type: 3}
       propertyPath: m_Tiles.Array.data[30].second.m_TileObjectToInstantiateIndex
-      value: 65535
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6643889835342640323, guid: a94dea23cd49f924699ab4300a8da259, type: 3}
       propertyPath: m_Tiles.Array.data[31].second.m_TileObjectToInstantiateIndex
-      value: 1
+      value: 65535
       objectReference: {fileID: 0}
     - target: {fileID: 6643889835342640323, guid: a94dea23cd49f924699ab4300a8da259, type: 3}
       propertyPath: m_Tiles.Array.data[34].second.m_TileObjectToInstantiateIndex
@@ -1457,18 +1459,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6643889835342640323, guid: a94dea23cd49f924699ab4300a8da259, type: 3}
       propertyPath: m_Tiles.Array.data[36].second.m_TileObjectToInstantiateIndex
-      value: 1
+      value: 65535
       objectReference: {fileID: 0}
     - target: {fileID: 6643889835342640323, guid: a94dea23cd49f924699ab4300a8da259, type: 3}
       propertyPath: m_Tiles.Array.data[38].second.m_TileObjectToInstantiateIndex
-      value: 1
+      value: 65535
       objectReference: {fileID: 0}
     - target: {fileID: 6643889835342640323, guid: a94dea23cd49f924699ab4300a8da259, type: 3}
       propertyPath: m_Tiles.Array.data[41].second.m_TileObjectToInstantiateIndex
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a94dea23cd49f924699ab4300a8da259, type: 3}
 --- !u!114 &3298133597648849208 stripped
 MonoBehaviour:

@@ -12,7 +12,6 @@ namespace MovementController.Player.States
         public float hangRayCastLengthX = 0.25f;
         public float hangRayCastLengthY = 0.15f;
         private bool _hitHead;
-        private bool _bouncedOnEnemy;
         public LayerMask solidBlockMask;
 
         private Collider2D _lastColliderToSee;
@@ -68,13 +67,6 @@ namespace MovementController.Player.States
             {
                 velocity.y = 0;
                 _hitHead = false;
-            }
-
-            if (_bouncedOnEnemy)
-            {
-                // TODO: This should not be a full jump. Maybe half height or something.
-                velocity.y = player._maxJumpVelocity;
-                _bouncedOnEnemy = false;
             }
         }
 

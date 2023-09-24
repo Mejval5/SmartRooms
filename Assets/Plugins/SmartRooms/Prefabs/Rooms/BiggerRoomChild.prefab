@@ -405,7 +405,7 @@ Tilemap:
       m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
+      m_TileObjectToInstantiateIndex: 1
       dummyAlignment: 0
       m_AllTileFlags: 5
   - first: {x: 5, y: 1, z: 0}
@@ -806,7 +806,7 @@ Tilemap:
   m_TileObjectToInstantiateArray:
   - m_RefCount: 34
     m_Data: {fileID: 7704191855080508706, guid: fe175b493cb4b03468b5d7bacc1b4ee7, type: 3}
-  - m_RefCount: 28
+  - m_RefCount: 29
     m_Data: {fileID: 7704191855080508706, guid: 7c1c6abd6f12d9047ac524753b3058aa, type: 3}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1053,7 +1053,7 @@ MonoBehaviour:
   _tilemap: {fileID: 6643889835342640323}
   _cachedGameObject: {fileID: 1193538006816164252}
   _cachedName: BiggerRoomChild
-  _cachedId: -13306
+  _cachedId: -6705808
 --- !u!114 &-6398231229833641348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1074,7 +1074,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 4075494394318224482}
     m_Modifications:
     - target: {fileID: 3223635312383729235, guid: fbce734033639724094fc28a25ae6c39, type: 3}
@@ -1126,7 +1126,9 @@ PrefabInstance:
       value: Block
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbce734033639724094fc28a25ae6c39, type: 3}
 --- !u!4 &7322941362038116964 stripped
 Transform:

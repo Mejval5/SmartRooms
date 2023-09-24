@@ -18,7 +18,10 @@ namespace MovementController.Player.States
             player.Audio.Play(splatClip);
             // TODO: This is temporary. The health class should handle dying and death effects. We're not technically
             // dead here currently either as nothing has reduced our health.
-            Instantiate(player.Health.bloodParticles, transform.position, Quaternion.identity);
+            if (player.Health.bloodParticles != null)
+            {
+                Instantiate(player.Health.bloodParticles, transform.position, Quaternion.identity);
+            }
             player.Physics.Collider.enabled = false;
         }
 
