@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5778508625315654942}
   - component: {fileID: 4705864145687303917}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CornerShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2825527757346563175}
   - component: {fileID: 2931263030604669891}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RightShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4052993936451927933}
   - component: {fileID: 1513402717346845689}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BottomShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 8932654928510286962}
   - component: {fileID: 6009694173440458800}
   - component: {fileID: 4169082858552108396}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: WoodTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,25 +372,6 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -424,12 +405,6 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6009694173440458800}
   - component: {fileID: 4169082858552108396}
   - component: {fileID: 6462408964439226985}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: EyeTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8255921812792517642}
   - component: {fileID: 6587418209926787955}
   - component: {fileID: 1794377235388777629}
-  m_Layer: 14
+  m_Layer: 1
   m_Name: LadderTop
   m_TagString: Ladder
   m_Icon: {fileID: 0}
@@ -32,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 8311101572892620858}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6587418209926787955
 SpriteRenderer:

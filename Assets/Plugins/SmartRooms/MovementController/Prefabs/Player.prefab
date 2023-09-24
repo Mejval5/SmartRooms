@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 782368877}
   - component: {fileID: 782368879}
   - component: {fileID: 782368878}
-  m_Layer: 7
+  m_Layer: 1
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1027837249, guid: c2e14e89858bf9e4c9cca0eef888f41f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: -6787339454029924957}
   - component: {fileID: 3574339902112029639}
   - component: {fileID: -3525105093392211172}
-  m_Layer: 7
+  m_Layer: 1
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -194,12 +194,6 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -214,25 +208,6 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -367,7 +342,7 @@ MonoBehaviour:
   splatState: {fileID: 3574339902112029639}
   edgeGrabLayerMask:
     serializedVersion: 2
-    m_Bits: 8960
+    m_Bits: 8961
   cam: {fileID: 0}
   _exitDoor: {fileID: 0}
   maxJumpHeight: 1.5
@@ -405,7 +380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionMask:
     serializedVersion: 2
-    m_Bits: 180032
+    m_Bits: 180033
   skinWidth: 0.1
   horizontalRayCount: 3
   verticalRayCount: 3
@@ -518,7 +493,7 @@ MonoBehaviour:
   hangRayCastLengthY: 0.15
   solidBlockMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   lastJumpAttemptTime: -3.4028235e+38
 --- !u!114 &7725953637132137021
 MonoBehaviour:
@@ -551,21 +526,18 @@ MonoBehaviour:
   player: {fileID: 0}
   ladderFilter:
     useTriggers: 1
-    useLayerMask: 1
+    useLayerMask: 0
     useDepth: 0
     useOutsideDepth: 0
     useNormalAngle: 0
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 16384
+      m_Bits: 2147483647
     minDepth: 0
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  ladderLayerMask:
-    serializedVersion: 2
-    m_Bits: 16384
 --- !u!114 &-3941064224825093986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,7 +610,7 @@ GameObject:
   - component: {fileID: 8558270721840197621}
   - component: {fileID: 3122557621806279139}
   - component: {fileID: 7559943637196607543}
-  m_Layer: 7
+  m_Layer: 1
   m_Name: WhipCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -670,25 +642,6 @@ BoxCollider2D:
   m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0

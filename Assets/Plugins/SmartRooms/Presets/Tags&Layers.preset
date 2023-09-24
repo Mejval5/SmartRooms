@@ -14,91 +14,19 @@ Preset:
   m_Properties:
   - target: {fileID: 0}
     propertyPath: tags.Array.size
-    value: 21
+    value: 3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: tags.Array.data[0]
-    value: ground
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: tags.Array.data[1]
-    value: enemy
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: tags.Array.data[2]
-    value: Playermain
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: tags.Array.data[3]
-    value: fallchek
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: tags.Array.data[4]
-    value: platform
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: tags.Array.data[5]
-    value: Joystick
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: tags.Array.data[6]
-    value: Mainground
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: tags.Array.data[7]
-    value: Diamond
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: tags.Array.data[8]
-    value: Traps
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: tags.Array.data[9]
-    value: room
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: tags.Array.data[10]
-    value: GenerateStartingPos
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: tags.Array.data[11]
-    value: Tiles
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: tags.Array.data[12]
-    value: Rope
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: tags.Array.data[13]
     value: OneWayPlatform
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: tags.Array.data[14]
-    value: Enemy
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: tags.Array.data[15]
-    value: Spikes
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: tags.Array.data[16]
-    value: Block
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: tags.Array.data[17]
-    value: Dirt
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: tags.Array.data[18]
+    propertyPath: tags.Array.data[1]
     value: Ladder
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: tags.Array.data[19]
-    value: Exit
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: tags.Array.data[20]
-    value: Entrance
+    propertyPath: tags.Array.data[2]
+    value: Block
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.size
@@ -118,7 +46,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[3]
-    value: ground
+    value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[4]
@@ -130,43 +58,43 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[6]
-    value: enemyLayers
+    value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[7]
-    value: player
+    value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[8]
-    value: Background
+    value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[9]
-    value: mapobjects
+    value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[10]
-    value: room
+    value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[11]
-    value: platform
+    value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[12]
-    value: roomCounter
+    value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[13]
-    value: SpawnpointTiles
+    value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[14]
-    value: Ladder
+    value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[15]
-    value: OneWayPlatform
+    value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[16]
@@ -234,78 +162,18 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.size
-    value: 6
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[0].name
-    value: tilemapbg
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[0].uniqueID
-    value: 45440347
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[0].locked
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[1].name
     value: Default
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[1].uniqueID
+    propertyPath: m_SortingLayers.Array.data[0].uniqueID
     value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[1].locked
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[2].name
-    value: tilemap
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[2].uniqueID
-    value: 287524169
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[2].locked
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[3].name
-    value: enemy
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[3].uniqueID
-    value: 2622988229
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[3].locked
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[4].name
-    value: player
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[4].uniqueID
-    value: 253552789
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[4].locked
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[5].name
-    value: bground
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[5].uniqueID
-    value: 1111584245
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[5].locked
+    propertyPath: m_SortingLayers.Array.data[0].locked
     value: 0
     objectReference: {fileID: 0}
   m_ExcludedProperties: []

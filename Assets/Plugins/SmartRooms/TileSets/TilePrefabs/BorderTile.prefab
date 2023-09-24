@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1140900275286847432}
   - component: {fileID: 3469521159268420669}
   - component: {fileID: 2547165820030118070}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RightBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 2833066140915063249}
   - component: {fileID: 6107241173173899362}
   - component: {fileID: 2334822284040045597}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: TopBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 815610671515374287}
   - component: {fileID: 4380564804961257475}
   - component: {fileID: 9137345857490303820}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: LeftBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 3627195670978174939}
   - component: {fileID: 1303494692248031139}
   - component: {fileID: 4134522660345235663}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BottomBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +410,7 @@ GameObject:
   - component: {fileID: 8932654928510286962}
   - component: {fileID: 6009694173440458800}
   - component: {fileID: 4169082858552108396}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BorderTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,25 +530,6 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -582,12 +563,6 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

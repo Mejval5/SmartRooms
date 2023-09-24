@@ -10,7 +10,6 @@ namespace MovementController.Player.States
     public class ClimbingState : State
     {
         public ContactFilter2D ladderFilter;
-        public LayerMask ladderLayerMask;
 
         private Collider2D _closestCollider;
 
@@ -46,15 +45,20 @@ namespace MovementController.Player.States
             {
                 direction = Vector2.up;
             }
-
-            RaycastHit2D hit = Physics2D.Raycast(position, direction, 9 / 16f, ladderLayerMask);
-            Debug.DrawRay(position, direction * 9 / 16f, Color.magenta);
-            if (hit.collider == null)
+            
+            
+            RaycastHit2D[] hits = Physics2D.RaycastAll(position, direction, 9 / 16f);
+            bool hitLadder = false;
+            foreach (RaycastHit2D hit in hits)
             {
-                return false;
+                if (hit.collider.gameObject.CompareTag("Ladder"))
+                {
+                    hitLadder = true;
+                }
             }
-
-            return true;
+            
+            Debug.DrawRay(position, direction * 9 / 16f, Color.magenta);
+            return hitLadder;
         }
 
         public override void EnterState()
@@ -107,9 +111,18 @@ namespace MovementController.Player.States
                 direction = Vector2.up;
             }
 
-            RaycastHit2D hit = Physics2D.Raycast(position, direction, 9 / 16f, ladderLayerMask);
+            RaycastHit2D[] hits = Physics2D.RaycastAll(position, direction, 9 / 16f);
+            bool hitLadder = false;
+            foreach (RaycastHit2D hit in hits)
+            {
+                if (hit.collider.gameObject.CompareTag("Ladder"))
+                {
+                    hitLadder = true;
+                }
+            }
+            
             Debug.DrawRay(position, direction * 9 / 16f, Color.magenta);
-            if (hit.collider == null)
+            if (hitLadder == false)
             {
                 velocity.y = 0;
             }
@@ -134,11 +147,12 @@ namespace MovementController.Player.States
             Collider2D closestCollider = null;
             foreach (Collider2D ladderCollider in ladderColliders)
             {
-                float xPos = ladderCollider.transform.position.x;
-                if (ladderCollider.CompareTag("Ladder"))
+                if (ladderCollider.CompareTag("Ladder") == false)
                 {
-                    xPos += MovementUtils.TileWidth / 2f;
+                    continue;
                 }
+                
+                float xPos = ladderCollider.transform.position.x + MovementUtils.TileWidth / 2f;
 
                 float currentDistance = Mathf.Abs(transform.position.x - xPos);
                 if (currentDistance < closestDistance)

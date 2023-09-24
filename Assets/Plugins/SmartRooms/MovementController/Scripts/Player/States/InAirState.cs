@@ -103,6 +103,11 @@ namespace MovementController.Player.States
                 return;
             }
 
+            if (hit.collider.GetComponent<IgnoreHanging>() != null)
+            {
+                return;
+            }
+
             // If we have the glove we can grab anything.
             if ((movingIntoWallOnTheLeft || movingIntoWallOnTheRight) && player.Inventory.hasClimbingGlove)
             {
@@ -128,8 +133,8 @@ namespace MovementController.Player.States
 
         private bool CanGrab(Vector2 playerPointCheck, Vector2 grabPointCheck)
         {
-            Collider2D hitBlockPlayer = Physics2D.OverlapPoint(playerPointCheck, player.edgeGrabLayerMask | solidBlockMask);
-            Collider2D hitBlockBlock = Physics2D.OverlapPoint(grabPointCheck, player.edgeGrabLayerMask | solidBlockMask);
+            Collider2D hitBlockPlayer = Physics2D.OverlapPoint(playerPointCheck, solidBlockMask);
+            Collider2D hitBlockBlock = Physics2D.OverlapPoint(grabPointCheck, solidBlockMask);
             return hitBlockPlayer == null && hitBlockBlock == null;
         }
 
