@@ -145,25 +145,7 @@ namespace MovementController.Player.States
         {
             if (collisionInfo.becameGroundedThisFrame)
             {
-                if (collisionInfo.colliderVertical.CompareTag("Enemy"))
-                {
-                    // TODO: Show some blood particles, play a sound etc. when this happened. Can maybe be generic in
-                    // the EntityHealth class for all damage? At least for now.
-                    collisionInfo.colliderVertical.GetComponent<EntityHealth>().TakeDamage(1);
-                    // Set a temporary flag so that we can apply the bounce velocity next frame. It's too late to do
-                    // it here. Update() calls Move() which checks for collisions which invokes this event. We won't
-                    // move again until the next frame so if we change the velocity here it will be changed/overridden
-                    // before it's applied.
-                    _bouncedOnEnemy = true;
-                }
-                else if (collisionInfo.colliderVertical.CompareTag("Spikes"))
-                {
-                    player.Splat();
-                }
-                else
-                {
-                    player.stateMachine.AttemptToChangeState(player.groundedState);
-                }
+                player.stateMachine.AttemptToChangeState(player.groundedState);
             }
 
             if (collisionInfo.up)

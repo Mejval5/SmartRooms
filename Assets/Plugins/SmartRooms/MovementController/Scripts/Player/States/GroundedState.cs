@@ -173,12 +173,6 @@ namespace MovementController.Player.States
 
         private void OnEntityPhysicsCollisionEnter(CollisionInfo collisionInfo)
         {
-            // TODO: This is a hack to avoid us getting dragged after enemies due to some weird interaction with the
-            // collision detection. See the TODO in Player.CalculateVelocity() for more information.
-            if ((collisionInfo.left || collisionInfo.right) && collisionInfo.colliderHorizontal.CompareTag("Enemy"))
-            {
-                player.velocity.x = 0;
-            }
         }
 
         private void OnEntityPhysicsCollisionExit(CollisionInfo collisionInfo)

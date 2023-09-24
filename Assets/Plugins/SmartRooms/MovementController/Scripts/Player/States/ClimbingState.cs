@@ -61,14 +61,7 @@ namespace MovementController.Player.States
         {
             player.Physics.collisionInfo.fallingThroughPlatform = true;
             float xPos = _closestCollider.transform.position.x;
-            if (_closestCollider.CompareTag("Rope"))
-            {
-                player.Visuals.animator.Play("ClimbRope");
-            }
-            else
-            {
-                player.Visuals.animator.Play("ClimbLadder");
-            }
+            player.Visuals.animator.Play("ClimbLadder");
 
             transform.position = new Vector3(xPos, transform.position.y, 0);
             player.Audio.Play(player.Audio.grabClip);
@@ -85,14 +78,7 @@ namespace MovementController.Player.States
             _closestCollider = FindClosestOverlappedLadder();
             if (_closestCollider)
             {
-                if (_closestCollider.CompareTag("Rope"))
-                {
-                    player.Visuals.animator.Play("ClimbRope");
-                }
-                else
-                {
-                    player.Visuals.animator.Play("ClimbLadder");
-                }
+                player.Visuals.animator.Play("ClimbLadder");
             }
 
             // Set the framerate of the climbing animation dynamically based on our climbing speed.
@@ -159,15 +145,6 @@ namespace MovementController.Player.States
                 {
                     closestDistance = currentDistance;
                     closestCollider = ladderCollider;
-                }
-
-                // Prioritize ropes over ladders due to the sprite sort order.
-                if (currentDistance == closestDistance)
-                {
-                    if (ladderCollider.CompareTag("Rope"))
-                    {
-                        closestCollider = ladderCollider;
-                    }
                 }
             }
 

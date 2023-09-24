@@ -234,7 +234,7 @@ MonoBehaviour:
   invulnerabilityDuration: 0
   numberOfInvulnerabilityFlashes: 10
   invulnerabilityFlashColor: {r: 0, g: 0, b: 0, a: 0}
-  isInvulnerable: 0
+  isInvulnerable: 1
 --- !u!114 &6392427896198750601
 MonoBehaviour:
   m_ObjectHideFlags: 0

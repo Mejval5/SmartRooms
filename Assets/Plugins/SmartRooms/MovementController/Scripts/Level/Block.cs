@@ -1,5 +1,7 @@
 ﻿using MovementController.Collision;
+using MovementController.Player.States;
 using MovementController.Utils;
+using System;
 using UnityEngine;
 
 namespace MovementController.Level
@@ -22,7 +24,6 @@ namespace MovementController.Level
         {
             base.Awake();
             _audioSource = GetComponent<AudioSource>();
-            Physics.OnCollisionEnterEvent.AddListener(OnEntityPhysicsCollisionEnter);
         }
 
         private void Update()
@@ -49,7 +50,7 @@ namespace MovementController.Level
             Physics.Move(_velocity * Time.deltaTime);
         }
 
-        private void OnEntityPhysicsCollisionEnter(CollisionInfo collisionInfo)
+        private void OnCollisionEnter2D(Collision2D other)
         {
             // Not sure if hacky or not, but I added this to avoid the landClip from playing on level start for all
             // blocks in the level.
@@ -59,12 +60,23 @@ namespace MovementController.Level
                 return;
             }
 
-            if (collisionInfo.becameGroundedThisFrame)
+            if (_velocity.y < 0)
             {
-                if (collisionInfo.colliderVertical.CompareTag("Player"))
+                if (other.gameObject.CompareTag("Player"))
                 {
-                    Player.Player player = collisionInfo.colliderVertical.GetComponent<Player.Player>();
-                    player.Splat();
+                    Player.Player player = other.gameObject.GetComponent<Player.Player>();
+                    if (player.stateMachine.CurrentState is GroundedState or CrawlToHangState)
+                    {
+                        player.Splat();
+                    }
+                    else if (player.stateMachine.CurrentState is ClimbingState)
+                    {
+                        player.stateMachine.AttemptToChangeState(player.inAirState);
+                    }
+                    else if (player.stateMachine.CurrentState is HangingState)
+                    {
+                        player.stateMachine.AttemptToChangeState(player.inAirState);
+                    }
                 }
                 else
                 {
