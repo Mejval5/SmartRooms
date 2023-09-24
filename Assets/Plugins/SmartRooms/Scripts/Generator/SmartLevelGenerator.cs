@@ -147,6 +147,17 @@ namespace SmartRooms.Generator
         /// </summary>
         public void StartGeneration()
         {
+            InitializeSeed();
+            
+#if UNITY_WEBGL && !UNITY_EDITOR
+            WebGlGenerationOnSingleThread();
+#else
+            BackgroundThreadGeneration();
+#endif
+        }
+
+        private void BackgroundThreadGeneration()
+        {
             // Don't run generation if the background generation thread is still running.
             if (_t is { IsAlive: true })
             {
@@ -158,12 +169,7 @@ namespace SmartRooms.Generator
             {
                 StopCoroutine(_generateCoroutine);
             }
-
-            // Initialize the level generation seed.
-            uint seed = _seed == -1 ? (uint)DateTime.Now.Ticks : (uint)_seed;
-            _random = new Random(seed);
-            UnityEngine.Random.InitState((int) seed);
-
+            
             // Start the generation in a background thread.
             _generationFinished = false;
             _t = new Thread(Generate);
@@ -172,6 +178,20 @@ namespace SmartRooms.Generator
             // Start the coroutine that checks if the generation is finished.
             _generateCoroutineIEnumerator = CheckGenerationFinished();
             _generateCoroutine = StartCoroutine(_generateCoroutineIEnumerator);
+        }
+
+        private void InitializeSeed()
+        {
+            // Initialize the level generation seed.
+            uint seed = _seed == -1 ? (uint)DateTime.Now.Ticks : (uint)_seed;
+            _random = new Random(seed);
+            UnityEngine.Random.InitState((int) seed);
+        }
+
+        private void WebGlGenerationOnSingleThread()
+        {
+            Generate();
+            FinishGeneration();
         }
 
         /// <summary>
@@ -188,10 +208,15 @@ namespace SmartRooms.Generator
                 yield return null;
             }
 
+            FinishGeneration();
+        }
+
+        private void FinishGeneration()
+        {
             // If the generation failed to generate a level, don't continue.
             if (_generationFinished == false)
             {
-                yield break;
+                return;
             }
             
             // Start timer.
