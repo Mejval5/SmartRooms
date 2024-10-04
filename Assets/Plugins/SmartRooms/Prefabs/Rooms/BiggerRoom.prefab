@@ -28,6 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193538006816164252}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -36,7 +37,6 @@ Transform:
   - {fileID: 3638531503568090918}
   - {fileID: 4605194570975432918}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0.08, y: 0, z: 0}
 --- !u!156049354 &1949973484038369305
 Grid:
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   _tilemap: {fileID: 6643889835342640323}
   _cachedGameObject: {fileID: 1193538006816164252}
   _cachedName: BiggerRoom
-  _cachedId: -866844
+  _cachedId: -194574
 --- !u!114 &-6398231229833641348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1192,7 +1192,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 4075494394318224482}
     m_Modifications:
     - target: {fileID: 1193538006816164252, guid: b3701f75af07cad4aac66dd94ffe7978, type: 3}
@@ -1205,7 +1205,7 @@ PrefabInstance:
       objectReference: {fileID: 6580944353543297143}
     - target: {fileID: 2788211170888892043, guid: b3701f75af07cad4aac66dd94ffe7978, type: 3}
       propertyPath: _cachedId
-      value: -866894
+      value: -194624
       objectReference: {fileID: 0}
     - target: {fileID: 4075494394318224482, guid: b3701f75af07cad4aac66dd94ffe7978, type: 3}
       propertyPath: m_RootOrder
@@ -1288,7 +1288,9 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3701f75af07cad4aac66dd94ffe7978, type: 3}
 --- !u!114 &2438232827493945919 stripped
 MonoBehaviour:
@@ -1316,7 +1318,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 4075494394318224482}
     m_Modifications:
     - target: {fileID: 1193538006816164252, guid: a94dea23cd49f924699ab4300a8da259, type: 3}
@@ -1325,7 +1327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2788211170888892043, guid: a94dea23cd49f924699ab4300a8da259, type: 3}
       propertyPath: _cachedId
-      value: -866858
+      value: -194588
       objectReference: {fileID: 0}
     - target: {fileID: 4075494394318224482, guid: a94dea23cd49f924699ab4300a8da259, type: 3}
       propertyPath: m_RootOrder
@@ -1472,7 +1474,9 @@ PrefabInstance:
       value: 65535
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a94dea23cd49f924699ab4300a8da259, type: 3}
 --- !u!114 &3298133597648849208 stripped
 MonoBehaviour:
