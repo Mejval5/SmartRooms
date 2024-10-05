@@ -330,6 +330,8 @@ namespace SmartRooms.Palette
 
             QuantumTile quantumTile = (QuantumTile)target;
             
+            quantumTile.TryToInitialize();
+            
             // Create chance presets
             GUILayout.BeginHorizontal();
             

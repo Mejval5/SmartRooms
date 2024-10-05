@@ -9,8 +9,8 @@ Shader "SmartRooms/Tilemap"
         [HideInInspector] _Flip ("Flip", Vector) = (1,1,1,1)
         [PerRendererData] _AlphaTex ("External Alpha", 2D) = "white" {}
         [PerRendererData] _EnableExternalAlpha ("Enable External Alpha", Float) = 0
-        _ReplaceColor ("Color which will be replaced by Foreground", Color) = (1,0,1,1)
-        _ReplaceMaxDistance ("Maximum distance from replace color to be replaced", Float) = 0.001
+        _ReplaceColor ("Color which will be replaced by Foreground", Color) = (1,1,1,1)
+        _ReplaceMaxDistance ("Maximum distance from replace color to be replaced", Float) = 1000
         _DebugPerlin ("Debug Perlin", Float) = 0
         _FGTexturePerlin ("FG Texture Perlin", 2D) = "white" {}
         _FGTexture1 ("FG Texture 1", 2D) = "white" {}

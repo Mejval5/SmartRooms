@@ -1171,7 +1171,7 @@ MonoBehaviour:
   _tilemap: {fileID: 6643889835342640323}
   _cachedGameObject: {fileID: 1193538006816164252}
   _cachedName: BiggerRoom
-  _cachedId: -194574
+  _cachedId: -191576
 --- !u!114 &-6398231229833641348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1205,7 +1205,7 @@ PrefabInstance:
       objectReference: {fileID: 6580944353543297143}
     - target: {fileID: 2788211170888892043, guid: b3701f75af07cad4aac66dd94ffe7978, type: 3}
       propertyPath: _cachedId
-      value: -194624
+      value: -191626
       objectReference: {fileID: 0}
     - target: {fileID: 4075494394318224482, guid: b3701f75af07cad4aac66dd94ffe7978, type: 3}
       propertyPath: m_RootOrder
@@ -1327,7 +1327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2788211170888892043, guid: a94dea23cd49f924699ab4300a8da259, type: 3}
       propertyPath: _cachedId
-      value: -194588
+      value: -191590
       objectReference: {fileID: 0}
     - target: {fileID: 4075494394318224482, guid: a94dea23cd49f924699ab4300a8da259, type: 3}
       propertyPath: m_RootOrder

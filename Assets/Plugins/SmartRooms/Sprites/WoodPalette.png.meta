@@ -25,7 +25,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -77,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -89,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -101,6 +103,33 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1147,55 +1176,55 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       WoodPalette_0: -1543752497
-      WoodPalette_41: -1485546678
-      WoodPalette_14: -1612529370
-      WoodPalette_27: -55560622
+      WoodPalette_1: -1903159920
       WoodPalette_10: 20731489
-      WoodPalette_7: -1756763843
-      WoodPalette_33: 584088559
-      WoodPalette_21: -1400855275
-      WoodPalette_18: -647434441
       WoodPalette_11: -523777621
-      WoodPalette_31: 1601626483
-      WoodPalette_38: -1912639413
-      WoodPalette_2: 347146547
-      WoodPalette_47: -809408449
+      WoodPalette_12: 439621789
+      WoodPalette_13: 1683610284
+      WoodPalette_14: -1612529370
+      WoodPalette_15: 1599764739
       WoodPalette_16: -2131892272
       WoodPalette_17: 1701875743
-      WoodPalette_46: 954225557
-      WoodPalette_39: -1979980157
-      WoodPalette_12: 439621789
-      WoodPalette_29: -524880372
-      WoodPalette_42: 27321294
-      WoodPalette_48: -882842050
-      WoodPalette_24: 185093254
-      WoodPalette_32: 44355985
-      WoodPalette_28: 572256655
-      WoodPalette_45: 1336295371
-      WoodPalette_9: -1030083455
-      WoodPalette_1: -1903159920
-      WoodPalette_8: -75987436
-      WoodPalette_20: 1851279525
-      WoodPalette_25: -1012149254
-      WoodPalette_40: -1048153292
-      WoodPalette_30: 1272854488
-      WoodPalette_36: -1618438207
-      WoodPalette_43: -1878537687
-      WoodPalette_4: 705382257
-      WoodPalette_5: -1781515333
-      WoodPalette_23: -2063923704
-      WoodPalette_6: 263555819
-      WoodPalette_35: -972950700
-      WoodPalette_37: 134683829
-      WoodPalette_15: 1599764739
-      WoodPalette_34: 1076946497
-      WoodPalette_44: -354168463
+      WoodPalette_18: -647434441
       WoodPalette_19: 2090500889
+      WoodPalette_2: 347146547
+      WoodPalette_20: 1851279525
+      WoodPalette_21: -1400855275
       WoodPalette_22: 855575998
+      WoodPalette_23: -2063923704
+      WoodPalette_24: 185093254
+      WoodPalette_25: -1012149254
       WoodPalette_26: 811179614
-      WoodPalette_13: 1683610284
+      WoodPalette_27: -55560622
+      WoodPalette_28: 572256655
+      WoodPalette_29: -524880372
       WoodPalette_3: 585586850
-  spritePackingTag: 
+      WoodPalette_30: 1272854488
+      WoodPalette_31: 1601626483
+      WoodPalette_32: 44355985
+      WoodPalette_33: 584088559
+      WoodPalette_34: 1076946497
+      WoodPalette_35: -972950700
+      WoodPalette_36: -1618438207
+      WoodPalette_37: 134683829
+      WoodPalette_38: -1912639413
+      WoodPalette_39: -1979980157
+      WoodPalette_4: 705382257
+      WoodPalette_40: -1048153292
+      WoodPalette_41: -1485546678
+      WoodPalette_42: 27321294
+      WoodPalette_43: -1878537687
+      WoodPalette_44: -354168463
+      WoodPalette_45: 1336295371
+      WoodPalette_46: 954225557
+      WoodPalette_47: -809408449
+      WoodPalette_48: -882842050
+      WoodPalette_5: -1781515333
+      WoodPalette_6: 263555819
+      WoodPalette_7: -1756763843
+      WoodPalette_8: -75987436
+      WoodPalette_9: -1030083455
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
