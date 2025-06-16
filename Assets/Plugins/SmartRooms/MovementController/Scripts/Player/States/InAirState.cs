@@ -1,5 +1,6 @@
 using MovementController.Collision;
 using MovementController.Entity;
+using Plugins.SmartRooms.MovementController.Scripts.Level;
 using UnityEngine;
 
 namespace MovementController.Player.States

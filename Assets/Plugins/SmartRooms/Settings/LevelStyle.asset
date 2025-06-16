@@ -22,8 +22,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b9416347f5fa1144db969abae131440d, type: 2}
   - {fileID: 11400000, guid: 0a13197a87aa94c40afe6c57f8482416, type: 2}
   - {fileID: 11400000, guid: 7bc18cded8654e541a397a642f8efcc9, type: 2}
-  <LevelTileSize>k__BackingField: {x: 5, y: 1}
-  <BuildModeDirection>k__BackingField: 2
+  <LevelTileSize>k__BackingField: {x: 4, y: 4}
+  <BuildModeDirection>k__BackingField: 0
   <Rooms>k__BackingField:
   - {fileID: -7283875756995121657, guid: 98307893418c60e44983b8389ec40c10, type: 3}
   - {fileID: 9005690575571127960, guid: c1acd91367cd35e4a872db2c8b9e94c6, type: 3}

@@ -72,13 +72,18 @@ namespace MovementController.Entity
             // Even though we're doing the full collision detection and handling ourselves a rigidbody is required for
             // Unity to even allow colliders to detect triggers and we use triggers for various things. So we add a
             // rigidbody, but we make sure it's impossible to actually interact with it.
-            Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
             // Ensure the rigidbody doesn't actually affect us.
-            rigidbody2D.bodyType = RigidbodyType2D.Kinematic;
+#if UNITY_6000_0_OR_NEWER
+            rb.bodyType = RigidbodyType2D.Kinematic;
+#else
+            rb.isKinematic = true;
+#endif
+            
             // Disable and collapse the inspector.
 #if UNITY_EDITOR
-            rigidbody2D.hideFlags = HideFlags.NotEditable;
-            UnityEditorInternal.InternalEditorUtility.SetIsInspectorExpanded(rigidbody2D, false);
+            rb.hideFlags = HideFlags.NotEditable;
+            UnityEditorInternal.InternalEditorUtility.SetIsInspectorExpanded(rb, false);
 #endif
         }
 

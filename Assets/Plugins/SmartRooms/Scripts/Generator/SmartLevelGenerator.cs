@@ -645,6 +645,7 @@ namespace SmartRooms.Generator
             else
             {
                 LogWarning("No end tile found as replacement");
+                return false;
             }
 
             lastRoomTile.Type = RoomTile.RoomTileType.EndRoom;
