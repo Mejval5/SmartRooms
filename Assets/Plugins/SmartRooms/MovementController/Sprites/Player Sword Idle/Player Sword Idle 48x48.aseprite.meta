@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 1
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -77,6 +78,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +91,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -103,6 +106,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -124,6 +128,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.2758621}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 32
@@ -144,6 +149,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.2962963}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 32
@@ -164,6 +170,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.30769232}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 60
@@ -184,6 +191,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.30769232}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 60
@@ -204,6 +212,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.30769232}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 88
@@ -224,6 +233,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.2962963}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 60
@@ -244,6 +254,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.2758621}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 32
@@ -264,6 +275,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.26666668}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -284,6 +296,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.26666668}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -304,6 +317,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.26666668}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -322,86 +336,96 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1508664064
+    guid: 1485942528
     name: Player Sword Idle 48x48
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Player Sword Idle 48x48_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 14
         y: 8
         width: 20
         height: 29
       spriteId: bd145d4c6ad2d6041842532ecc0bf333
-    - name: Player Sword Idle 48x48_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 14
         y: 8
         width: 20
         height: 27
       spriteId: 22f66c725d9baf843b82d8c274a0db88
-    - name: Player Sword Idle 48x48_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 14
         y: 8
         width: 20
         height: 26
       spriteId: 1bad92cde7aceca4eb2d93c40baf58ea
-    - name: Player Sword Idle 48x48_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 14
         y: 8
         width: 20
         height: 26
       spriteId: 76c2928eab1d3514fa45a7ae2c8bf4fa
-    - name: Player Sword Idle 48x48_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 14
         y: 8
         width: 20
         height: 26
       spriteId: bf27414a670988b4da2f3eec3741546b
-    - name: Player Sword Idle 48x48_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 14
         y: 8
         width: 20
         height: 27
       spriteId: c9b491ffcf58e9242ad9d54401c814f9
-    - name: Player Sword Idle 48x48_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 14
         y: 8
         width: 20
         height: 29
       spriteId: 16cfece1fc78ef44ab5ec9a82b1d1472
-    - name: Player Sword Idle 48x48_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 14
         y: 8
         width: 20
         height: 30
       spriteId: 5a63ecef8ded55d4ba33f129a449e8fb
-    - name: Player Sword Idle 48x48_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 14
         y: 8
         width: 20
         height: 30
       spriteId: aa923a1086c7cd04081dea41372ce325
-    - name: Player Sword Idle 48x48_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 14
         y: 8
@@ -411,6 +435,8 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 128}

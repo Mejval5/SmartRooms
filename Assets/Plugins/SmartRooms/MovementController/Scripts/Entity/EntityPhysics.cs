@@ -74,7 +74,7 @@ namespace MovementController.Entity
             // rigidbody, but we make sure it's impossible to actually interact with it.
             Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
             // Ensure the rigidbody doesn't actually affect us.
-            rigidbody2D.isKinematic = true;
+            rigidbody2D.bodyType = RigidbodyType2D.Kinematic;
             // Disable and collapse the inspector.
 #if UNITY_EDITOR
             rigidbody2D.hideFlags = HideFlags.NotEditable;

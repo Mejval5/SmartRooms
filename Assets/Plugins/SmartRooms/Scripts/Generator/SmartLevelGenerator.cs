@@ -553,7 +553,7 @@ namespace SmartRooms.Generator
                 // Get the next tile. It should connect to the previous tile, and be in the list of possible directions.
                 RoomTile newTile = GetTile(previousTile, newDirection, possibleDirections);
 
-                bool inFinalLayer = previousTile != null && _mainGeneratedPath.Count >= 2 && InFinalLayer(_mainGeneratedPath[^2]);
+                bool inFinalLayer = previousTile != null && InFinalLayer(_mainGeneratedPath[^1]);
                 bool randomStop = _random.NextInt(100) < _randomStopChance;
                 bool noTileStop = newTile == null;
 
@@ -601,9 +601,15 @@ namespace SmartRooms.Generator
                 LogWarning("Hit max iteration, probably a bug: " + iteration);
                 return false;
             }
+
+            if (_mainGeneratedPath.Count < 2)
+            {
+                LogWarning("Too little rooms generated, need at least 2");
+                return false;
+            }
             
             // One before current tile position is an exit tile.
-            if (GenerateExit(_mainGeneratedPath[^3], _mainGeneratedPath[^2], lastDirection) == false)
+            if (GenerateExit(_mainGeneratedPath[^2], _mainGeneratedPath[^1], lastDirection) == false)
             {
                 LogWarning("Exit generation failed");
                 return false;
@@ -622,12 +628,6 @@ namespace SmartRooms.Generator
         private bool GenerateExit(Vector2Int previousTileCoords, Vector2Int exitPosition, Direction lastDirection)
         {
             RoomTile lastRoomTile = FinalLevelLayout.roomTiles[exitPosition.x, exitPosition.y] as RoomTile;
-
-            if (lastRoomTile == null)
-            {
-                LogWarning("Last room tile was null");
-                return false;
-            }
 
             RoomTile tileBeforeEnd = FinalLevelLayout.roomTiles[previousTileCoords.x, previousTileCoords.y] as RoomTile;
 
